@@ -54,21 +54,18 @@ L/R                  3.3V
 
 // --- PRIVATE credentials -----
 
-const char* ssid = "SSID";         // ## INSERT your wlan ssid
-const char* password = "PASS";  // ## INSERT your password
+const char* ssid = "";         // ## INSERT your wlan ssid
+const char* password = "";  // ## INSERT your password
 
  // mandatory, filename for the AUDIO recording
+ #define AUDIO "Battery10.wav"
 
 
 // --- PIN assignments ---------
 
 #define pin_RECORD_BTN 36
-// #define LED 2
+#define LED 2
 
-// Extra Pins:
-#define I2S_WS 42
-#define I2S_SD 41
-#define I2S_SCK 1
 
 // SD Card GPIO Pins
 #define SD_MMC_CMD 38 // Please do not modify it.
@@ -99,8 +96,8 @@ void setup() {
   Serial.setTimeout(100);  // 10 times faster reaction after CR entered (default is 1000ms)
 
   // Pin assignments:
-  pinMode(LED, OUTPUT);
-  pinMode(pin_RECORD_BTN, INPUT);  // use INPUT_PULLUP if no external Pull-Up connected ##
+  // pinMode(LED, OUTPUT);
+  // pinMode(pin_RECORD_BTN, INPUT);  // use INPUT_PULLUP if no external Pull-Up connected ##
 
 
   // Hello World
@@ -124,6 +121,7 @@ void setup() {
 //     return;
 //   }
 
+
     // SD Card Initialization
     SD_MMC.setPins(SD_MMC_CLK, SD_MMC_CMD, SD_MMC_D0);
     if (!SD_MMC.begin("/sdcard", true, true, SDMMC_FREQ_DEFAULT, 5))
@@ -139,7 +137,7 @@ void setup() {
     }
     Serial.println("SD Card Initialized");
 
-
+  
   // initialize KALO I2S Recording Services (don't forget!)
   I2S_Record_Init();
 
