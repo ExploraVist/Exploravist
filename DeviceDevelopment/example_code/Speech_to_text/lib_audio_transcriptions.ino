@@ -34,7 +34,7 @@
 
 // --- PRIVATE credentials & user favorites -----  
 
-const char* deepgramApiKey =    "DEEPGRAM+API+KEY";   // ## INSERT your Deepgram credentials !
+const char* deepgramApiKey =    "";   // ## INSERT your Deepgram credentials !
 
 #define STT_LANGUAGE      "en-IN"  // forcing single language: e.g. "de" (German), reason: improving recognition quality
                                 // keep EMPTY ("") if you want Deepgram to detect & understand 'your' language automatically, 
@@ -76,7 +76,7 @@ String SpeechToText_Deepgram( String audio_filename )
         
   // ---------- Check if AUDIO file exists, check file size 
   
-  File audioFile = SD.open( audio_filename );    
+  File audioFile = SD_MMC.open( audio_filename );    
   if (!audioFile) {
     Serial.println("ERROR - Failed to open file for reading");
     return ("");
@@ -118,7 +118,7 @@ String SpeechToText_Deepgram( String audio_filename )
   // ---------- Reading the AUDIO wav file, sending in CHUNKS (closing file after done)
   // idea found here (WiFiClientSecure.h issue): https://www.esp32.com/viewtopic.php?t=4675
   
-  File file = SD.open( audio_filename, FILE_READ );
+  File file = SD_MMC.open( audio_filename, FILE_READ );
   const size_t bufferSize = 1024;      // best values seem anywhere between 1024 and 2048; 
   uint8_t buffer[bufferSize];
   size_t bytesRead;

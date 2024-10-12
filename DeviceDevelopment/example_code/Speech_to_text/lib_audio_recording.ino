@@ -18,7 +18,7 @@
 
 
 #include "driver/i2s_std.h"     // instead of older legacy #include <driver/i2s.h>  
-/* #include <SD.h>              // also needed, but already included in Main.ino */
+#include <SD_MMC.h>              // also needed, but already included in Main.ino */
 
 
 // --- defines & macros --------
@@ -84,7 +84,7 @@ i2s_std_config_t  std_cfg =
     .data_bit_width = I2S_DATA_BIT_WIDTH_16BIT,   // not I2S_DATA_BIT_WIDTH_8BIT or (i2s_data_bit_width_t) BITS_PER_SAMPLE  
     .slot_bit_width = I2S_SLOT_BIT_WIDTH_AUTO, 
     .slot_mode = I2S_SLOT_MODE_MONO,              // or I2S_SLOT_MODE_STEREO
-    .slot_mask = I2S_STD_SLOT_RIGHT,              // use 'I2S_STD_SLOT_LEFT' in case L/R pin is connected to GND !
+    .slot_mask = I2S_STD_SLOT_LEFT,              // use 'I2S_STD_SLOT_LEFT' in case L/R pin is connected to GND !
     .ws_width =  I2S_DATA_BIT_WIDTH_16BIT,           
     .ws_pol = false, 
     .bit_shift = true,   // using [.bit_shift = true] similar PHILIPS or PCM format (NOT 'false' as in MSB macro) ! ..
@@ -166,12 +166,12 @@ bool Record_Start( String audio_filename )
   { 
     flg_is_recording = true;
     
-    if (SD.exists(audio_filename)) 
-    {  SD.remove(audio_filename); DebugPrintln("\n> Existing AUDIO file removed.");
+    if (SD_MMC.exists(audio_filename)) 
+    {  SD_MMC.remove(audio_filename); DebugPrintln("\n> Existing AUDIO file removed.");
     }  else {DebugPrintln("\n> No AUDIO file found");}
     
     // Kalo WAV header
-    File audio_file = SD.open(audio_filename, FILE_WRITE);
+    File audio_file = SD_MMC.open(audio_filename, FILE_WRITE);
     audio_file.write((uint8_t *) &myWAV_Header, 44);
     audio_file.close(); 
     
@@ -218,7 +218,7 @@ bool Record_Start( String audio_filename )
     } */      
     
     // Save audio data to SD card (appending chunk array to file end)
-    File audio_file = SD.open(audio_filename, FILE_APPEND);
+    File audio_file = SD_MMC.open(audio_filename, FILE_APPEND);
     if (audio_file)
     {  
        if (BITS_PER_SAMPLE == 16) // 16 bit default: appending original I2S chunks (e.g. 1014 values, 2048 bytes)
@@ -260,7 +260,7 @@ bool Record_Available( String audio_filename, float* audiolength_sec )
     // https://github.com/espressif/arduino-esp32/issues/4028
     // https://cplusplus.com/reference/cstdio/fopen/
     
-    File audio_file = SD.open(audio_filename, "r+");
+    File audio_file = SD_MMC.open(audio_filename, "r+");
     long filesize = audio_file.size();
     audio_file.seek(0); myWAV_Header.flength = filesize;  myWAV_Header.dlength = (filesize-8);
     audio_file.write((uint8_t *) &myWAV_Header, 44);

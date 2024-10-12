@@ -45,7 +45,7 @@ L/R                  3.3V
 #define VERSION "\n=== KALO ESP32 Voice Assistant (last update: July 22, 2024) ======================"
 
 #include <WiFi.h>  // only included here
-#include <SD.h>    // also needed in other tabs (.ino)
+#include <SD_MMC.h>    // also needed in other tabs (.ino)
 
 #include <Audio.h>  // needed for PLAYING Audio (via I2S Amplifier, e.g. MAX98357) with ..
                     // Audio.h library from Schreibfaul1: https://github.com/schreibfaul1/ESP32-audioI2S
@@ -58,7 +58,7 @@ const char* ssid = "";         // ## INSERT your wlan ssid
 const char* password = "";  // ## INSERT your password
 
  // mandatory, filename for the AUDIO recording
- #define AUDIO "Battery10.wav"
+ #define AUDIO "Battery0.wav"
 
 
 // --- PIN assignments ---------
@@ -149,7 +149,8 @@ void setup() {
 
 // ------------------------------------------------------------------------------------------------------------------------------
 void loop() {
-  if (digitalRead(pin_RECORD_BTN) == LOW)  // Recording started (ongoing)
+  // if (digitalRead(pin_RECORD_BTN) == LOW)  // Recording started (ongoing)
+  if (touchRead(T14) > 35000)
   {
     digitalWrite(LED, HIGH);
     delay(30);  // unbouncing & suppressing button 'click' noise in begin of audio recording
@@ -158,7 +159,8 @@ void loop() {
     Record_Start(AUDIO_FILE);
   }
 
-  if (digitalRead(pin_RECORD_BTN) == HIGH)  // Recording not started yet .. OR stopped now (on release button)
+  // if (digitalRead(pin_RECORD_BTN) == HIGH)  // Recording not started yet .. OR stopped now (on release button)
+  if (touchRead(T14) < 35000)
   {
     digitalWrite(LED, LOW);
 
@@ -186,7 +188,7 @@ void loop() {
   // Idea: Connect once, then sending each 5 seconds dummy bytes (to overcome Deepgram auto-closing 10 secs after last request)
   // keep in mind: WiFiClientSecure.h still not 100% reliable (assuming RAM heap issue, rarely freezes after e.g. 10 mins)
 
-  if (digitalRead(pin_RECORD_BTN) == HIGH && !audio_play.isRunning())  // but don't do it during recording or playing
+  if ((touchRead(T14) < 35000) && !audio_play.isRunning())  // but don't do it during recording or playing
   {
     static uint32_t millis_ping_before;
     if (millis() > (millis_ping_before + 5000)) {
