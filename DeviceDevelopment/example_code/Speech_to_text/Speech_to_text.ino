@@ -54,8 +54,8 @@ L/R                  3.3V
 
 // --- PRIVATE credentials -----
 
-const char* ssid = "";         // ## INSERT your wlan ssid
-const char* password = "";  // ## INSERT your password
+const char* ssid = "Claremont-ETC";         // ## INSERT your wlan ssid
+const char* password = "Cl@remontI0T";  // ## INSERT your password
 
  // mandatory, filename for the AUDIO recording
  #define AUDIO "Battery0.wav"
@@ -149,9 +149,11 @@ void setup() {
 
 // ------------------------------------------------------------------------------------------------------------------------------
 void loop() {
+  
   // if (digitalRead(pin_RECORD_BTN) == LOW)  // Recording started (ongoing)
-  if (touchRead(T14) > 35000)
+  if (touchRead(T3) > 70000)
   {
+    // Serial.println(touchRead(T3));
     digitalWrite(LED, HIGH);
     delay(30);  // unbouncing & suppressing button 'click' noise in begin of audio recording
 
@@ -160,9 +162,10 @@ void loop() {
   }
 
   // if (digitalRead(pin_RECORD_BTN) == HIGH)  // Recording not started yet .. OR stopped now (on release button)
-  if (touchRead(T14) < 35000)
+  if (touchRead(T14) < 70000)
   {
     digitalWrite(LED, LOW);
+    // Serial.println(touchRead(T3));
 
     float recorded_seconds;
     if (Record_Available(AUDIO_FILE, &recorded_seconds))  //  true once when recording finalized (.wav file available)
@@ -187,8 +190,8 @@ void loop() {
   // [Optional]: Stabilize WiFiClientSecure.h + Improve Speed of STT Deepgram response (~1 sec faster)
   // Idea: Connect once, then sending each 5 seconds dummy bytes (to overcome Deepgram auto-closing 10 secs after last request)
   // keep in mind: WiFiClientSecure.h still not 100% reliable (assuming RAM heap issue, rarely freezes after e.g. 10 mins)
-
-  if ((touchRead(T14) < 35000) && !audio_play.isRunning())  // but don't do it during recording or playing
+  
+  if ((touchRead(T14) < 70000) && !audio_play.isRunning())  // but don't do it during recording or playing
   {
     static uint32_t millis_ping_before;
     if (millis() > (millis_ping_before + 5000)) {

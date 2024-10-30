@@ -24,6 +24,7 @@
 // #define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
 #define FORMAT_SPIFFS_IF_FAILED
 #define I2S_PORT I2S_NUM_0
+#define THRESHOLD 50000
 
 const String ai_prompt = "Please provide a description of this image suitable for a blind or visually impaired individual. Try to remain as concise as possible and outline any larger key features by listing out objects seen. If you see any text please try to read out the text first before saying anything.  do not mention the quality of the image, and do not make a followup remark about how you have completed your task. When you are done make it concise and don't say anything more.";
 
@@ -55,7 +56,7 @@ void settingsMenu() {
         
         // Serial.println(newTime - lastTime);
         newTime = millis();
-        if (touchRead(T14) > 35000) // Select button
+        if (touchRead(T2) > THRESHOLD) // Select button
         {
             device.playWAVFile("popClick.wav");
             Serial.println("click");
@@ -69,7 +70,7 @@ void settingsMenu() {
                 aiInterface.beginGPT();
             }
         }
-        if (touchRead(T3) > 35000) // Scroll button
+        if (touchRead(T3) > THRESHOLD) // Scroll button
         {
             subMenuIndex++;
             if (subMenuIndex > 1)
@@ -115,7 +116,7 @@ void aiCall(int model_selection){
     listDir(SPIFFS, "/", 0);
     Serial.println(ai_response);
 
-    // device.GoogleTTS(ai_response, "en");                                     
+    device.GoogleTTS(ai_response, "en");                                     
     menuIndex = 0;
 }
 
@@ -125,7 +126,7 @@ void volumeMenu() {
     unsigned long startTime = millis();
     unsigned long newTime = millis();
     while (newTime-startTime < timer) {
-        if (touchRead(T14) > 35000)
+        if (touchRead(T2) > THRESHOLD)
         {
             device.increaseVolume();
             device.playWAVFile("popClickHighPitch.wav");
@@ -135,7 +136,7 @@ void volumeMenu() {
             lastTime = millis(); 
         }
 
-        if (touchRead(T3) > 35000) 
+        if (touchRead(T3) > THRESHOLD) 
         {
             device.decreaseVolume();
             device.playWAVFile("popClickLowPitch.wav");
@@ -189,7 +190,7 @@ void loop()
 // menus 0, 1, 2, 3, 4, 
   // Serial.println("made it to main loop");
 
-    if (touchRead(T3) > 35000) { // Back Button (Menu Scroll Button)
+    if (touchRead(T3) > THRESHOLD) { // Back Button (Menu Scroll Button)
         Serial.println(menuIndex);
 
         if (menuIndex > 4){
@@ -198,12 +199,12 @@ void loop()
         
         delay(5);
         
-        // device.playWAVFile(menuOptions[menuIndex]);
+        device.playWAVFile(menuOptions[menuIndex]);
         menuIndex++;
     }
 
-    if (touchRead(T14) > 35000) { // Select Button ()
-        // device.playWAVFile("popClick.wav");
+    if (touchRead(T2) > THRESHOLD) { // Select Button ()
+        device.playWAVFile("popClick.wav");
 
         switch (menuIndex) {
             case 0: // Short Description
@@ -226,7 +227,7 @@ void loop()
                 }
             case 3: // Battery Level
                 {
-                    // int percentage = device.readPercentage();
+                    int percentage = device.readPercentage();
                     Serial.print("Battery Percentage: ");
                     // Serial.println(percentage);
                     device.playBatterySound(percentage);
