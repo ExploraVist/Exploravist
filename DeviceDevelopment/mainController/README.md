@@ -3,9 +3,9 @@
 
 // Copy the following below in to a Config.h fileand fill in the blanks.
 
-const char* ssid = ";
+const char* ssid = "";
 const char* password = "";
-char* gpt_token = "";
+char* gpt_key = "";
 char* anthropic_key = "";
 
 ### Step 2: Arduino IDE Library Downloads

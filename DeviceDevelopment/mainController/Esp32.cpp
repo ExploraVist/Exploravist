@@ -205,7 +205,7 @@ void Esp32::playTextSegments(String text, String lang)
         while (audio.isRunning())
         {
             audio.loop();
-            if (touchRead(T14) > 35000)
+            if (touchRead(T3) > 35000)
             {
                 stop_play = 1;
                 break;

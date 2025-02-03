@@ -55,7 +55,7 @@ void settingsMenu() {
         
         // Serial.println(newTime - lastTime);
         newTime = millis();
-        if (touchRead(T14) > 35000) // Select button
+        if (touchRead(T14) > 45000) // Select button
         {
             device.playWAVFile("popClick.wav");
             Serial.println("click");
@@ -69,7 +69,7 @@ void settingsMenu() {
                 aiInterface.beginGPT();
             }
         }
-        if (touchRead(T3) > 35000) // Scroll button
+        if (touchRead(T3) > 45000) // Scroll button
         {
             subMenuIndex++;
             if (subMenuIndex > 1)
@@ -115,7 +115,7 @@ void aiCall(int model_selection){
     listDir(SPIFFS, "/", 0);
     Serial.println(ai_response);
 
-    // device.GoogleTTS(ai_response, "en");                                     
+    device.GoogleTTS(ai_response, "en");                                     
     menuIndex = 0;
 }
 
@@ -125,7 +125,7 @@ void volumeMenu() {
     unsigned long startTime = millis();
     unsigned long newTime = millis();
     while (newTime-startTime < timer) {
-        if (touchRead(T14) > 35000)
+        if (touchRead(T14) > 45000)
         {
             device.increaseVolume();
             device.playWAVFile("popClickHighPitch.wav");
@@ -135,7 +135,7 @@ void volumeMenu() {
             lastTime = millis(); 
         }
 
-        if (touchRead(T3) > 35000) 
+        if (touchRead(T3) > 45000) 
         {
             device.decreaseVolume();
             device.playWAVFile("popClickLowPitch.wav");
@@ -188,22 +188,23 @@ void loop()
 {
 // menus 0, 1, 2, 3, 4, 
   // Serial.println("made it to main loop");
+    // Serial.println(touchRead(T3));
 
-    if (touchRead(T3) > 35000) { // Back Button (Menu Scroll Button)
-        Serial.println(menuIndex);
+    // if (touchRead(T3) > 45000) { // Back Button (Menu Scroll Button)
+    //     Serial.println(menuIndex);
 
-        if (menuIndex > 4){
-            menuIndex=0;
-        }
+    //     if (menuIndex > 4){
+    //         menuIndex=0;
+    //     }
         
-        delay(5);
+    //     delay(5);
         
-        // device.playWAVFile(menuOptions[menuIndex]);
-        menuIndex++;
-    }
+    //     device.playWAVFile(menuOptions[menuIndex]);
+    //     menuIndex++;
+    // }
 
-    if (touchRead(T14) > 35000) { // Select Button ()
-        // device.playWAVFile("popClick.wav");
+    if (touchRead(T3) > 35000) { // Select Button ()
+        device.playWAVFile("popClick.wav");
 
         switch (menuIndex) {
             case 0: // Short Description
@@ -226,7 +227,7 @@ void loop()
                 }
             case 3: // Battery Level
                 {
-                    // int percentage = device.readPercentage();
+                    int percentage = device.readPercentage();
                     Serial.print("Battery Percentage: ");
                     // Serial.println(percentage);
                     device.playBatterySound(percentage);
