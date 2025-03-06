@@ -26,11 +26,11 @@
     height: calc(var(--nav-size)*(2/3));
     margin-top: calc(var(--nav-size)*(1/6));
     margin-bottom: calc(var(--nav-size)*(1/6));
-    margin-left: 3vw;
+    margin-left: 6vw;
 }
 
 .nav_links {
-    margin-right: 4vw;
+    margin-right: 4.2vw;
 }
 
 .nav_link {

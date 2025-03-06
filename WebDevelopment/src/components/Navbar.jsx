@@ -50,8 +50,8 @@ const Navbar = () => {
         <div className='nav_links'>
           {!isMobileMenu && 
             <div>
-              <Link to='/contact' className='nav_link'>Contact</Link>
-              <Link to='/updates' className='nav_link'>Updates</Link>
+              <Link to='/contact' className='nav_link'><b>CONTACT</b></Link>
+              <Link to='/updates' className='nav_link'><b>UPDATES</b></Link>
             </div>
           }
           {isMobileMenu &&

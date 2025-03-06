@@ -29,14 +29,14 @@
     background-color: var(--bg);
     border: .2rem solid var(--bg-accent);
     border-radius: 15px;
-    filter: drop-shadow(.5rem .5rem 4px var(--bg-accent-two));
+    filter: drop-shadow(.1rem .1rem 2px var(--bg-accent-two));
 }
 
 .home_nextsection_btn:hover,
 .home_nextsection_btn:focus-visible {
     cursor: pointer;
     filter: opacity(85%);
-    filter: drop-shadow(.5rem .5rem 4px var(--bg-accent-two));
+    filter: drop-shadow(.1rem .1rem 2px var(--bg-accent-two));
 }
 
 .home_arrow_down {
