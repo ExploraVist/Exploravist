@@ -9,8 +9,70 @@
 
 .home_logo {
     height: 70vh;
+    min-height: 70vh;
     background-color: var(--bg-accent);
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: none;
+}
+
+.hex_grid {
+    height: 75vh;
+    background: var(--bg);
+}
+
+.hex_grid .grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../assets/grid.svg) repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: 500px;
+}
+
+.hex_grid .light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15rem;
+    height: 15rem;
+    filter: blur(15px);
+    background: linear-gradient(90deg, var(--hero-gradient-1) 0%, var(--hero-gradient-2) 50%, var(--hero-gradient-3) 100%);
+    z-index: 0;
+}
+
+.glass_background {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.344);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(242, 244, 255, 0.3);
+    z-index: 20;
+    margin-left: 5vw;
+    padding: 2rem;
+    max-width: 40vw;
+}
+
+.home_text_title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--bg-accent);
+    margin-bottom: 1rem;
+}
+
+.home_text_desc {
+    font-size: 1.25rem;
+    color: var(--bg-accent);
+    margin-bottom: 1rem;
 }
 
 .home_nextsection {

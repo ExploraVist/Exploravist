@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar'
 import ImageSlider from '../components/ImageSlider'
 import VideoPlayer from '../components/VideoPlayer'
 import Footer from '../components/Footer'
-import HomeLogo from '../assets/home-logo.svg'
 import img1 from '../imgs/image-1.jpg'
 import img2 from '../imgs/image-2.jpg'
 import img3 from '../imgs/image-3.jpg'
@@ -16,6 +15,7 @@ import '../styles/Home.css';
 const Home = () => {
   const images = [img1, img2, img3, img4, img5];
 
+  // Next Section
   const sliderRef = useRef(null); 
   const controls = useAnimation();
 
@@ -50,11 +50,43 @@ const Home = () => {
     }
   }
 
+  // Home Hero Section Hexagons
+  useEffect(() => {
+    const light = document.querySelector('.light');
+    const grid = document.querySelector('.hex_grid');
+
+    const handleMouseMove = (e) => {
+      if (light) {
+        light.style.left = `${e.clientX}px`;
+        light.style.top = `${e.clientY}px`;
+      }
+    };
+
+    if (grid) {
+      grid.addEventListener('mousemove', handleMouseMove);
+    }
+
+    return () => {
+      if (grid) {
+        grid.removeEventListener('mousemove', handleMouseMove);
+      }
+    };
+  }, []);
+
   return (
     <Fragment>
       <Navbar/>
       <section className='home_logo_hero'>
-        <img className='home_logo' src={HomeLogo} alt='AI VISION - Developing the worlds most affordable AI visual description device' />
+        <div className='home_logo'>
+          <header className='hex_grid'>
+            <div className='light'></div>
+            <div className='grid'></div>
+          </header>
+          <div className='glass_background'>
+            <p className='home_text_title'> An affordable, AI-driven device designed for the visually impaired.</p>
+            <p className='home_text_desc'> Easily attachable to any pair of glasses, ExploraVist reliably provides detailed descriptions of the user’s surroundings in just seconds.</p>
+          </div>
+        </div>
       </section>
       <section className='home_nextsection'>
         <motion.button 
@@ -79,6 +111,9 @@ const Home = () => {
         <div className='image_slider_wrapper' aria-label='Image Slider'>
           <ImageSlider imageUrls={images} />
         </div>
+      </section>
+      <section className='home_text_section'>
+        
       </section>
       <Footer />
     </Fragment>
