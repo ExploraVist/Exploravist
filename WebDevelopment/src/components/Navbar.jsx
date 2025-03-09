@@ -1,7 +1,7 @@
-import React , { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Menu, SquareX } from 'lucide-react';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import NavLogo from '../assets/nav-logo.svg';
 import '../styles/Navbar.css';
 
@@ -9,7 +9,6 @@ const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
-
 
   const handleResize = () => {
     if (window.innerWidth <= 700) {
@@ -19,16 +18,16 @@ const Navbar = () => {
       setMobileMenu(false);
       setMobileMenuVisible(false);
     }
-  }
+  };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) setSticky(true);
+    if (window.scrollY > 40) setSticky(true);
     else setSticky(false);
-  }
+  };
 
   const toggleMobileMenu = () => {
     setMobileMenuVisible(!isMobileMenuVisible);
-  }
+  };
 
   useEffect(() => {
     handleResize();
@@ -38,21 +37,34 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <Fragment>
       <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
-        <Link to='/' className='navbar_title'>
-          <img className='nav_logo' src={NavLogo} alt='ExploraVist' />
+        {/* Disable clicks on the logo when faded */}
+        <Link to='/' className='navbar_title' style={{ pointerEvents: isSticky ? "none" : "auto" }}>
+          <motion.img 
+            className='nav_logo' 
+            src={NavLogo} 
+            alt='ExploraVist'
+            initial={{ opacity: 1 }}
+            animate={{ opacity: isSticky ? 0 : 1 }}
+            transition={{ duration: 0.3 }}
+          />
         </Link>
         <div className='nav_links'>
           {!isMobileMenu && 
-            <div>
+            <motion.div
+              style={{ pointerEvents: isSticky ? "none" : "auto" }}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: isSticky ? 0 : 1 }}
+              transition={{ duration: 0.3 }}
+            >
               <Link to='/contact' className='nav_link'><b>CONTACT</b></Link>
               <Link to='/updates' className='nav_link'><b>UPDATES</b></Link>
-            </div>
+            </motion.div>
           }
           {isMobileMenu &&
             <div>

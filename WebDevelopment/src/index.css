@@ -9,6 +9,12 @@
     --alt: #17207a;
     --alt-two: #0a21c0;
     --alt-three: #3c50d0;
+    
+    /* Hero section gradient colors - complementing our blue theme */
+    --hero-gradient-1: #1a237e; /* Deep blue */
+    --hero-gradient-2: #0d47a1; /* Rich blue */
+    --hero-gradient-3: #2962ff; /* Bright blue */
+    --hero-glow: rgba(41, 98, 255, 0.3); /* Subtle blue glow */
 }
 
 html {

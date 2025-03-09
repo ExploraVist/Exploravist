@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef } from 'react'
-import {ArrowDownToLine} from 'lucide-react'
+import { ArrowDownToLine } from 'lucide-react'
 import { motion, useAnimation } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import ImageSlider from '../components/ImageSlider'
