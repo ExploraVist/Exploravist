@@ -72,6 +72,8 @@ const Updates = () => {
           {updates.map((update, index) => (
             <UpdateItem key={update.id} update={update} defaultOpen={index === 0} />
           ))}
+          <br/>
+          <br/>
         </section>
       </main>
       <Footer/>

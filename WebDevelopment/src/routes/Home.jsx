@@ -112,9 +112,6 @@ const Home = () => {
           <ImageSlider imageUrls={images} />
         </div>
       </section>
-      <section className='home_text_section'>
-        
-      </section>
       <Footer />
     </Fragment>
   )
