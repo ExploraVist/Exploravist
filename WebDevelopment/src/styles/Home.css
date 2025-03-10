@@ -17,7 +17,7 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
-    cursor: none;
+    cursor: pointer;
 }
 
 .hex_grid {
@@ -33,14 +33,14 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-size: 500px;
+    /* background-size: 500px; */
 }
 
 .hex_grid .light {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -100%);
     width: 15rem;
     height: 15rem;
     filter: blur(15px);
@@ -50,7 +50,7 @@
 
 .glass_background {
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.344);
+    background: rgba(97, 97, 97, 0.344);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -65,13 +65,13 @@
 .home_text_title{
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--bg-accent);
+    color: var(--bg);
     margin-bottom: 1rem;
 }
 
 .home_text_desc {
     font-size: 1.25rem;
-    color: var(--bg-accent);
+    color: var(--bg);
     margin-bottom: 1rem;
 }
 
