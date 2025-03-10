@@ -1,15 +1,31 @@
 import React, { createContext, useState } from 'react';
+import imgGen4 from '../imgs/updates_gen4.jpg';
 import imgGen3 from '../imgs/updates_gen3.jpg';
 import imgGen2 from '../imgs/updates_gen2.jpg';
 import imgGen1 from '../imgs/updates_gen1.jpg';
 
 export const ImagesMap = {
+  gen4: imgGen4,
   gen3: imgGen3,
   gen2: imgGen2,
   gen1: imgGen1,
 };
 
 const initialUpdates = [
+  {
+    id: 4,
+    category: "HIVE x CLINIC",
+    date: "07.05.24",
+    title: "ExploraVist Featured in The Hive x Harvey Mudd Clinic Update!",
+    sections: [
+      { type: 'header', content: "The Hive x Harvey Mudd Clinic" },
+      { type: 'paragraph', content: "For the first half of the Clinic project, our primary goal was to deeply understand the needs of the blind and visually impaired (BVI) community and identify challenges that our device could address. Through over a dozen interviews, we came to learn about the visually impaired experience from a variety of different perspectives." },
+      { type: 'paragraph', content: "We also were able to perform user testing with a variety of prototypes at the San Bernardino Lighthouse for The Blind. In the coming semester, we will provide devices to users for extended testing, as well as follow up on our interviewees, build our business platform, and ultimately develop an easy and affordably manufacturable device by the end of the semester." },
+      { type: 'paragraph', content: "We are excited for the unique opportunity we have in partnership with the Hive and are eager to get the ExploraVist device into the hands of users!" },
+      { type: 'header', content: "Click to read the full article!" },
+      { type: 'imageLink', imageKey: "gen4", link: "https://us14.campaign-archive.com/?u=9be17699582e7f4b8d4a76675&id=7746d38772" }
+    ]
+  },
   {
     id: 3,
     category: "Gen 3", // now customizable (could be "Gen 3", "Partnership", etc.)

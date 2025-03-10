@@ -17,6 +17,10 @@
     border-radius: 1rem;
 }
 
+.updates_details_img:hover {
+    cursor: pointer;
+}
+
 .updates_header {
     font-size: 2.5rem;
     margin-top: 3.5rem;
@@ -35,8 +39,12 @@
     flex-direction: row;
     align-items: center;
     font-size: 1.15rem;
-    cursor: pointer;
     gap: 0.5rem;
+}
+
+.updates_details_toggle:hover,
+.updates_details_toggle:focus-visible {
+    cursor: pointer;
 }
 
 .updates_details_toggle:hover,

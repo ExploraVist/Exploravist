@@ -169,7 +169,7 @@ const Admin = () => {
         {!isAuthenticated ? (
           <section className="admin-login-section">
             <div className="login-container">
-              <h2 className="login-title">Enter Admin Password</h2>
+              <h2 className="login-title">Admin</h2>
               <form onSubmit={handleLoginSubmit} className="login-form">
                 <input
                   type="password"
@@ -188,7 +188,6 @@ const Admin = () => {
           <>
             <div className="admin-edit-header">
               <h1 className="admin-title">Admin Dashboard</h1>
-              <button className="admin-btn logout-btn" onClick={handleLogout}>Log Out</button>
             </div>
             <form className="admin-form" onSubmit={handleSubmit}>
               <h2>{editingUpdate ? "Edit Update" : "Create New Update"}</h2>
@@ -303,6 +302,9 @@ const Admin = () => {
             <br />
             <br />
             <Link className="admin-btn" to="/updates">Go to Public Updates</Link>
+            <br/>
+            <button className="admin-btn" onClick={handleLogout}>Log Out</button>
+
           </>
         )}
       </main>
