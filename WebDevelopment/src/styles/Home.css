@@ -17,7 +17,7 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .hex_grid {
@@ -33,7 +33,8 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    /* background-size: 500px; */
+    background-size: 750px;
+    /* can be 500px or 1000px as well */
 }
 
 .hex_grid .light {
@@ -59,7 +60,7 @@
     z-index: 20;
     margin-left: 5vw;
     padding: 2rem;
-    max-width: 40vw;
+    max-width: 35vw;
 }
 
 .home_text_title{

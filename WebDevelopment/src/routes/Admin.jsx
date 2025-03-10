@@ -205,7 +205,7 @@ const Admin = () => {
                 <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
               </label>
               <div className="sections-container">
-                <h3 className="sections-title">Sections</h3>
+                <h3 className="sections-title">Sections:</h3>
                 {sections.map((sec, index) => (
                   <div key={index} className="section-item">
                     <div className="section-type">{sec.type}</div>
