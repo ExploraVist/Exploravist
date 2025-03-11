@@ -82,7 +82,8 @@ const Navbar = () => {
                     <button className='nav_mobile_menu_x_btn' onClick={toggleMobileMenu}><X className='square' size={55}/></button>
                   </div>
                   <div className='nav_mobile_menu_links'>
-                    <p className='nav_mobile_menu_title'>Navigate</p>
+                    <p className='nav_mobile_menu_title'>Menu</p>
+                    {/* <br/> */}
                     <Link to='/' className='nav_mobile_menu_link'>Home</Link>
                     <Link to='/updates' className='nav_mobile_menu_link'>Updates</Link>
                     <Link to='/contact' className='nav_mobile_menu_link'>Contact</Link>
