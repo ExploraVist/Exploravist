@@ -1,4 +1,4 @@
-.home_logo_hero {
+.home_hero {
     display: flex;
     flex-direction: column;
     height: 75vh;
@@ -7,7 +7,7 @@
     margin: auto;
 }
 
-.home_logo {
+.home_hero_wrapper {
     height: 70vh;
     min-height: 70vh;
     background-color: var(--bg-accent);

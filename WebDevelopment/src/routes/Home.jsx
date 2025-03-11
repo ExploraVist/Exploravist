@@ -53,14 +53,14 @@ const Home = () => {
   // Home Hero Section Hexagons
   useEffect(() => {
     const light = document.querySelector('.light');
-    const grid = document.querySelector('.home_logo');
+    const grid = document.querySelector('.home_hero_wrapper');
 
     const handleMouseMove = (e) => {
       if (light) {
-        setTimeout(() => {
-          light.style.left = `${e.clientX}px`;
-          light.style.top = `${e.clientY}px`;
-        }, 200); // 100ms delay
+      setTimeout(() => {
+        light.style.left = `${e.clientX}px`;
+        light.style.top = `${e.clientY + window.scrollY}px`; //fix this scroll thingth it doesnt work
+      }, 200); // 200ms delay
       }
     };
 
@@ -78,8 +78,8 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar/>
-      <section className='home_logo_hero'>
-        <div className='home_logo'>
+      <section className='home_hero'>
+        <div className='home_hero_wrapper'>
           <header className='hex_grid'>
             <div className='light'></div>
             <div className='grid'></div>

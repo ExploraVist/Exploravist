@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { Menu, SquareX } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import NavLogo from '../assets/nav-logo.svg';
+import NavLogo from '../imgs/nav-logo.png';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -79,10 +79,10 @@ const Navbar = () => {
               >
                 <div className='nav_mobile_menu'>
                   <div className='nav_mobile_menu_x'>
-                    <button className='nav_mobile_menu_x_btn' onClick={toggleMobileMenu}><SquareX className='square' size={70}/></button>
+                    <button className='nav_mobile_menu_x_btn' onClick={toggleMobileMenu}><X className='square' size={55}/></button>
                   </div>
                   <div className='nav_mobile_menu_links'>
-                    <p className='nav_mobile_menu_title'>Menu</p>
+                    <p className='nav_mobile_menu_title'>Navigate</p>
                     <Link to='/' className='nav_mobile_menu_link'>Home</Link>
                     <Link to='/updates' className='nav_mobile_menu_link'>Updates</Link>
                     <Link to='/contact' className='nav_mobile_menu_link'>Contact</Link>

@@ -29,7 +29,7 @@ const initialUpdates = [
   {
     id: 4,
     category: "HMC Clinic",
-    date: "12.05.24",
+    date: "8.16.24",
     title: "ExploraVist Launches Clinic Project at Harvey Mudd College",
     sections: [
       { type: 'header', content: "The ’24-’25 Entrepreneurial Clinic at Harvey Mudd College is proudly sponsored by The Hive" },
