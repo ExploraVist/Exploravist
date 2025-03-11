@@ -17,7 +17,7 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
-    /* cursor: pointer; */
+    cursor: crosshair;
 }
 
 .hex_grid {
@@ -42,6 +42,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-100%, -100%);
+    border-radius: 50%;
     width: 15rem;
     height: 15rem;
     filter: blur(15px);
@@ -60,7 +61,7 @@
     z-index: 20;
     margin-left: 5vw;
     padding: 2rem;
-    max-width: 35vw;
+    width: 35vw;
 }
 
 .home_text_title{
@@ -137,10 +138,69 @@
     aspect-ratio: 2;
 }
 
+@media only screen and (max-width: 1000px) {
+    .glass_background {
+        width: 50vw;
+    }
+
+    .hex_grid .grid {
+        background-size: 500px;
+    }
+
+    .home_text_title {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    .home_text_desc {
+        font-size: 1.25rem;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     .home_logo {
         max-width: 90vw;
         background-color: var(--bg-accent);
         border-radius: 15px;
     }
+
+    .glass_background {
+        margin-left: 5vw;
+        padding: 2rem;
+        width: 80vw;
+    }
+
+    .hex_grid .grid {
+        background-size: 500px;
+    }
+
+    .home_text_title {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    .home_text_desc {
+        font-size: 1.25rem;
+    }
 }
+
+@media only screen and (max-width: 550px) {
+    .glass_background {
+        width: 75vw;
+        margin: auto;
+    }
+
+    .hex_grid .grid {
+        background-size: 300px;
+    }
+
+    .home_text_title {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    .home_text_desc {
+        font-size: 1.25rem;
+    }
+}
+

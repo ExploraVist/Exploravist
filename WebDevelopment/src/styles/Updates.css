@@ -82,12 +82,12 @@
 
 .updates_details {
     margin-left: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
-.updates_details h2 {
+.updates_details h2 h3 {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .updates_details ul {

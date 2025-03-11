@@ -53,12 +53,14 @@ const Home = () => {
   // Home Hero Section Hexagons
   useEffect(() => {
     const light = document.querySelector('.light');
-    const grid = document.querySelector('.hex_grid');
+    const grid = document.querySelector('.home_logo');
 
     const handleMouseMove = (e) => {
       if (light) {
-        light.style.left = `${e.clientX}px`;
-        light.style.top = `${e.clientY}px`;
+        setTimeout(() => {
+          light.style.left = `${e.clientX}px`;
+          light.style.top = `${e.clientY}px`;
+        }, 200); // 100ms delay
       }
     };
 

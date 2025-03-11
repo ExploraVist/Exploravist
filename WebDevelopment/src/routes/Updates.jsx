@@ -15,7 +15,7 @@ const UpdateItem = ({ update, defaultOpen }) => {
   const renderSection = (section, index) => {
     switch(section.type) {
       case 'paragraph':
-        return <p key={index}>{section.content}</p>;
+        return <p key={index} className='updates_details_paragraph'>{section.content}</p>;
       case 'header':
         if(section.headerLevel === 3) {
           return <h3 key={index}>{section.content}</h3>;

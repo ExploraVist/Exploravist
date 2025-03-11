@@ -13,24 +13,35 @@ export const ImagesMap = {
 
 const initialUpdates = [
   {
-    id: 4,
+    id: 5,
     category: "HIVE x CLINIC",
-    date: "07.05.24",
+    date: "12.05.24",
     title: "ExploraVist Featured in The Hive x Harvey Mudd Clinic Update!",
     sections: [
       { type: 'header', content: "The Hive x Harvey Mudd Clinic" },
       { type: 'paragraph', content: "For the first half of the Clinic project, our primary goal was to deeply understand the needs of the blind and visually impaired (BVI) community and identify challenges that our device could address. Through over a dozen interviews, we came to learn about the visually impaired experience from a variety of different perspectives." },
       { type: 'paragraph', content: "We also were able to perform user testing with a variety of prototypes at the San Bernardino Lighthouse for The Blind. In the coming semester, we will provide devices to users for extended testing, as well as follow up on our interviewees, build our business platform, and ultimately develop an easy and affordably manufacturable device by the end of the semester." },
       { type: 'paragraph', content: "We are excited for the unique opportunity we have in partnership with the Hive and are eager to get the ExploraVist device into the hands of users!" },
-      { type: 'header', content: "Click to read the full article!" },
+      { type: 'header', content: "Click below to read the full article!" },
       { type: 'imageLink', imageKey: "gen4", link: "https://us14.campaign-archive.com/?u=9be17699582e7f4b8d4a76675&id=7746d38772" }
     ]
   },
   {
+    id: 4,
+    category: "HMC Clinic",
+    date: "12.05.24",
+    title: "ExploraVist Launches Clinic Project at Harvey Mudd College",
+    sections: [
+      { type: 'header', content: "The ’24-’25 Entrepreneurial Clinic at Harvey Mudd College is proudly sponsored by The Hive" },
+      { type: 'paragraph', content: "The Hive is an organization dedicated to deepening the understanding and appreciation of human-centered design and its potential for creative, positive impact. ExploraVist was selected for this opportunity due to its technical innovation and strong societal responsiveness, addressing specific community needs through its work." },
+      { type: 'paragraph', content: "With $60,000 in funding from The Hive, this Clinic project will support a team of six in the Engineering Department, driving forward our mission of developing affordable accessibility solutions. We’re incredibly excited about the progress and developments ahead—stay tuned for what’s to come!" }
+    ]
+  },
+  {
     id: 3,
-    category: "Gen 3", // now customizable (could be "Gen 3", "Partnership", etc.)
+    category: "Gen 0.3",
     date: "04.21.24",
-    title: "Our ready for market prototype!",
+    title: "Our first ready for market prototype!",
     sections: [
       { type: 'paragraph', content: "This version responds in 6 seconds with 95%+ success rate in descriptions, and thanks to our model switch to Claude Haiku, is 40x cheaper!" },
       { type: 'header', content: "We also now have a UI that allows you to:" },
@@ -45,7 +56,7 @@ const initialUpdates = [
   },
   {
     id: 2,
-    category: "Gen 2",
+    category: "Gen 0.2",
     date: "02.15.24",
     title: "Device works (Still slowly) with battery safety and capacitive touch UI",
     sections: [
@@ -57,7 +68,7 @@ const initialUpdates = [
   },
   {
     id: 1,
-    category: "Gen 1",
+    category: "Gen 0.1",
     date: "12.25.23",
     title: "First working version",
     sections: [
