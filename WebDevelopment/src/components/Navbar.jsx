@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   const handleResize = () => {
-    if (window.innerWidth <= 700) {
+    if (window.innerWidth <= 770) {
       setMobileMenu(true);
       setMobileMenuVisible(false);
     } else {
@@ -62,8 +62,8 @@ const Navbar = () => {
               animate={{ opacity: isSticky ? 0 : 1 }}
               transition={{ duration: 0.3 }}
             >
-              <Link to='/contact' className='nav_link'><b>CONTACT</b></Link>
-              <Link to='/updates' className='nav_link'><b>UPDATES</b></Link>
+              <Link to='/contact' className='nav_link'>CONTACT</Link>
+              <Link to='/updates' className='nav_link'>UPDATES</Link>
             </motion.div>
           }
           {isMobileMenu &&

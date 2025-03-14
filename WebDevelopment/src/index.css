@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --nav-size: 15vh;
     --footer-size: 10vh;
-    --bg: #f2f4ff;
-    --bg-accent: #0b0b0b;
+    --bg: #f8f8f8;
+    --bg-accent: #1c1c1c;
     --bg-accent-two:#272727;
     --alt: #17207a;
     --alt-two: #0a21c0;
     --alt-three: #3c50d0;
     
     /* Hero section gradient colors - complementing our blue theme */
-    --hero-gradient-1: #1a237e; /* Deep blue */
-    --hero-gradient-2: #0d47a1; /* Rich blue */
-    --hero-gradient-3: #2962ff; /* Bright blue */
+    --hero-gradient-1: #171f75; /* Deep blue */
+    --hero-gradient-2: #0b3f8e; /* Rich blue */
+    --hero-gradient-3: #2458e6; /* Bright blue */
     --hero-glow: rgba(41, 98, 255, 0.3); /* Subtle blue glow */
 }
 
@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
     width: 100vw;
     background-color: var(--bg);
-    font-family: "Philosopher", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-weight: normal;
@@ -45,5 +45,7 @@ ul {
 a {
     color: var(--bg-accent);
     text-decoration: none;
-    font-family: "Philosopher", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: .1rem;
 }

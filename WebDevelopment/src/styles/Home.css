@@ -61,12 +61,12 @@
     z-index: 20;
     margin-left: 5vw;
     padding: 2rem;
-    width: 35vw;
+    width: 40vw;
 }
 
 .home_text_title{
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--bg);
     margin-bottom: 1rem;
 }
