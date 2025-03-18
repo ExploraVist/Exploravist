@@ -5,8 +5,10 @@ const GenerationTitle = (props) => {
   return (
     <Fragment>
       <header className='generationtitle'>
-        <p className='generationtitle_num'>{props.category}:</p>
-        <p className='generationtitle_date'>({props.date})</p>
+        <div className='generationtitle_wrapper'>
+          <p className='generationtitle_num'>{props.category}:</p>
+          <p className='generationtitle_date'>[{props.date}]</p>
+        </div>
         <p className='generationtitle_title'>{props.title}</p>
       </header>
     </Fragment>

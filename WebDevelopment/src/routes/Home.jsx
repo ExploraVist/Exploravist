@@ -5,15 +5,31 @@ import Navbar from '../components/Navbar'
 import ImageSlider from '../components/ImageSlider'
 import VideoPlayer from '../components/VideoPlayer'
 import Footer from '../components/Footer'
-import img1 from '../imgs/image-1.jpg'
-import img2 from '../imgs/image-2.jpg'
-import img3 from '../imgs/image-3.jpg'
-import img4 from '../imgs/image-4.jpg'
-import img5 from '../imgs/image-5.jpg'
+import img1 from '../imgs/image-1a.png'
+import img1b from '../imgs/image-1b.png'
+import img2 from '../imgs/image-2.png'
+import img2b from '../imgs/image-2b.png'
+import img3 from '../imgs/image-3.png'
+import img3b from '../imgs/image-3b.png'
+import img4 from '../imgs/image-4.png'
+import img4b from '../imgs/image-4b.png'
+import img5 from '../imgs/image-5.png'
+import img5b from '../imgs/image-5b.png'
+import img6 from '../imgs/image-6.png'
 import '../styles/Home.css';
 
 const Home = () => {
-  const images = [img1, img2, img3, img4, img5];
+
+  const images = [img2, img3, img4, img5, img6];
+
+  // const screenWidth = window.innerWidth;
+  // let images = [];
+  // if (screenWidth < 950) {
+  //   images = [img1b, img2b, img3b, img4b, img5b];
+  // } else {
+  //   images = [img1, img2, img3, img4, img5];
+  // }
+  
 
   // Next Section
   const sliderRef = useRef(null); 
@@ -109,7 +125,7 @@ const Home = () => {
       >
         <VideoPlayer/>
       </motion.section>
-      <section className='home_image_slider'>
+      <section className='home_image_slider' id = 'imageSection'>
         <div className='image_slider_wrapper' aria-label='Image Slider'>
           <ImageSlider imageUrls={images} />
         </div>

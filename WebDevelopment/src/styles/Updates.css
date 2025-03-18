@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.15rem;
+    font-size: 1rem;
     gap: 0.5rem;
 }
 
@@ -82,12 +82,17 @@
 
 .updates_details {
     margin-left: 1rem;
-    font-size: 1.15rem;
+    font-size: 1rem;
 }
 
-.updates_details h2 h3 {
+.updates_details h2 {
     font-weight: 600;
     font-size: 1.4rem;
+}
+
+.updates_details h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .updates_details ul {
@@ -130,6 +135,8 @@
     .updates_gen {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
+        padding-bottom: 1rem;
+        border-bottom: .5px solid var(--bg);
     }
 
     .updates_details_toggle {

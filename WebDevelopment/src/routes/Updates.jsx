@@ -48,7 +48,7 @@ const UpdateItem = ({ update, defaultOpen }) => {
       <GenerationTitle category={update.category} date={update.date} title={update.title} />
       <span className='updates_details_toggle' onClick={() => setShowDetails(!showDetails)}>
         <ChevronDown className={`icon ${showDetails ? 'rotate-down' : 'rotate-right'}`} size={30}/>
-        <strong>Details</strong>
+        <p>Details</p>
       </span>
       {showDetails && (
         <div className='updates_details'>
