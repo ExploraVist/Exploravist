@@ -41,7 +41,6 @@
     border: 3px var(--bg-accent-two) solid;
     border-radius: 15px;
     transition: ease-in-out 250ms;
-    z-index: 10000;
 }
 
 .nav_link:hover {
@@ -140,6 +139,7 @@
     color: var(--bg);
     font-size: 1.4rem;
     margin-bottom: 1.2rem;
+    z-index: 1000
 }
 
 .nav_mobile_menu_active_link {
@@ -154,6 +154,5 @@
     background: url(../assets/mobile-menu.svg) no-repeat;
     width: 100%;
     height: 100%;
-    z-index: 0;
     background-size: cover;
 }
