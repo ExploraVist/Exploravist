@@ -41,21 +41,14 @@
     border: 3px var(--bg-accent-two) solid;
     border-radius: 15px;
     transition: ease-in-out 250ms;
+    z-index: 10000;
 }
 
 .nav_link:hover {
     filter: opacity(75%);
 }
 
-.nav_updates {
-    height: var(--nav-size);
-}
-
-.nav_contact {
-    height: 5rem;
-}
-
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 850px) {
     .nav_logo {
         height: calc(var(--nav-size)*(1/2));
         margin-top: calc(var(--nav-size)*(1/4));
@@ -63,10 +56,12 @@
         margin-left: 0;
         margin-right: 0;
     }
+
     .nav_link {
         align-items: center;
     }
 }
+
 
 .nav_mobile_menu_dropdown {
     position: fixed;
@@ -90,14 +85,10 @@
     background-color: transparent;
 }
 
-.nav_mobile_menu_x{
+.nav_mobile_menu_spacer{
     display: flex;
     justify-content: end;
     height: 15vh;
-    background: rgba(11, 11, 11, 0.33);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(4.1px); */
-    /* -webkit-backdrop-filter: blur(4px); */
 }
 
 .nav_mobile_menu_x_btn {
@@ -111,6 +102,8 @@
     border: 3px var(--bg-accent-two) solid;
     border-radius: 15px;
     transition: ease-in-out 250ms;
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); */
 }
 
 .nav_mobile_menu_x_btn:hover {
@@ -128,14 +121,15 @@
     flex-direction: column;
     align-items: center;
     height: 85vh;
-    background-color: #000000;
+    background-color: var(--bg-accent);
+    text-align: center;
 }
 
 .nav_mobile_menu_title {
     font-size: 2rem;
     font-weight: bold;
     color: var(--bg);
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: .5rem;
@@ -145,9 +139,21 @@
 .nav_mobile_menu_link {
     color: var(--bg);
     font-size: 1.4rem;
-    background-color: var(--bg-accent);
-    padding: 1rem 25vw 1rem 25vw;
-    margin: 10vw 0 10vw 0;
-    border: 3px var(--bg-accent-two) solid;
-    border-radius: 15px;
+    margin-bottom: 1.2rem;
+}
+
+.nav_mobile_menu_active_link {
+    color: var(--bg);
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    filter: brightness(70%);
+}
+
+.nav_mobile_menu_svg {
+    position: absolute;
+    background: url(../assets/mobile-menu.svg) no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
 }

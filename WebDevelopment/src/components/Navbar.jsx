@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import NavLogo from '../imgs/nav-logo.png';
+import NavLogo from '../assets/nav-logo.svg'
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   const handleResize = () => {
-    if (window.innerWidth <= 770) {
+    if (window.innerWidth <= 850) {
       setMobileMenu(true);
       setMobileMenuVisible(false);
     } else {
@@ -68,25 +68,23 @@ const Navbar = () => {
           }
           {isMobileMenu &&
             <div>
-              <button className='nav_link' onClick={toggleMobileMenu}><Menu/></button>
+              <button className='nav_link' onClick={toggleMobileMenu}>{!isMobileMenuVisible ? <Menu/> : <X /> }</button>
               {isMobileMenuVisible &&
               <motion.div
                 className='nav_mobile_menu_dropdown'
-                initial={{ y: '-100%' }}
-                animate={{ y: 0 }}
-                exit={{ y: '-100%' }}
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
                 transition={{ duration: 0.5 }}
               >
                 <div className='nav_mobile_menu'>
-                  <div className='nav_mobile_menu_x'>
-                    <button className='nav_mobile_menu_x_btn' onClick={toggleMobileMenu}><X className='square' size={55}/></button>
-                  </div>
+                  <div className='nav_mobile_menu_spacer' onClick={toggleMobileMenu} />
                   <div className='nav_mobile_menu_links'>
                     <p className='nav_mobile_menu_title'>Menu</p>
-                    {/* <br/> */}
-                    <Link to='/' className='nav_mobile_menu_link'>Home</Link>
-                    <Link to='/updates' className='nav_mobile_menu_link'>Updates</Link>
-                    <Link to='/contact' className='nav_mobile_menu_link'>Contact</Link>
+                    <Link to='/' className={`nav_mobile_menu_link ${window.location.pathname === '/' ? 'nav_mobile_menu_active_link' : ''}`}>Home</Link>
+                    <Link to='/updates' className={`nav_mobile_menu_link ${window.location.pathname === '/updates' ? 'nav_mobile_menu_active_link' : ''}`}>Updates</Link>
+                    <Link to='/contact' className={`nav_mobile_menu_link ${window.location.pathname === '/contact' ? 'nav_mobile_menu_active_link' : ''}`}>Contact</Link>
+                    <div className='nav_mobile_menu_svg' />
                   </div>
                 </div>
               </motion.div>

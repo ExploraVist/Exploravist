@@ -264,7 +264,7 @@
     .home_testing_title {
         font-size: 1.75rem;
         padding: 0.2rem .9rem 0.2rem .9rem;
-        margin: 5rem 0 2.5rem 0;
+        margin: 4rem 0 2.5rem 0;
     }
 
     .home_testing_text_one {
@@ -281,7 +281,6 @@
 @media only screen and (max-width: 550px) {
     .glass_background {
         width: 75vw;
-
     }
 
     .hex_grid .grid {
@@ -289,27 +288,31 @@
     }
 
     .home_text_title {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
     }
 
     .home_text_desc {
         font-size: 1rem;
     }
 
+    .glass_text {
+        background-color: rgba(39, 39, 39, 0.7);
+    }
+
     .home_testing_title {
-        font-size: 1.75rem;
-        padding: 0.15rem .7rem 0.15rem .6rem;
-        margin: 3rem 0 2rem 0;
+        font-size: 1.5rem;
+        padding: 0.15rem .6rem 0.15rem .6rem;
+        margin: 2rem 0 2rem 0;
     }
 
     .home_testing_text_one {
-        font-size: 1.2rem;
-        padding: 0.15rem .7rem 0.15rem .6rem;
+        font-size: 1rem;
+        padding: 0.15rem .6rem 0.15rem .6rem;
     }
 
     .home_testing_text_two {
-        font-size: 1.2rem;
-        padding: 0.15rem .7rem 0.15rem .6rem;
+        font-size: 1rem;
+        padding: 0.15rem .6rem 0.15rem .6rem;
     }
 }
 
