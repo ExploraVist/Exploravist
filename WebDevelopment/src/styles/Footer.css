@@ -9,4 +9,11 @@
 .footer_copyright {
     color: var(--bg);
     font-size: 1.125rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 550px) {
+    .footer_copyright {
+        font-size: 1rem;
+    }
 }
