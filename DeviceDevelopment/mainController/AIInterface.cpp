@@ -5,9 +5,9 @@
 
 #define LED1 2
 
-#define I2S_DOUT 21
-#define I2S_BCLK 47
-#define I2S_LRC 45
+#define I2S_DOUT 41
+#define I2S_BCLK 1
+#define I2S_LRC 42
 
 // TODO:
 // Consider asynchronous HTTPS requests

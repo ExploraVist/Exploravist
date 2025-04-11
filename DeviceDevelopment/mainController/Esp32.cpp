@@ -38,7 +38,7 @@ Esp32::Esp32()
     audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
     audio.setVolume(systemVolume); // 0...21
 
-    Wire.begin(2, 48); // Initialize I2C
+    Wire.begin(46, 19); // Initialize I2C
 };
 
 
