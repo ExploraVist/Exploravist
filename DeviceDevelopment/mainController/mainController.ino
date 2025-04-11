@@ -4,6 +4,7 @@
 #include "Camera.h"
 #include "config.h"
 #include "Esp32.h"
+#include "AppConnection.h"  // Added for BLE AppConnection functionality
 
 #include "soc/soc.h"          // Disable brownout problems
 #include "soc/rtc_cntl_reg.h" // Disable brownout problems
@@ -32,9 +33,7 @@ WifiAccess wifiAccess(ssid, password); // Initialize WifiAccess object named "wi
 AIInterface aiInterface(gpt_key, anthropic_key);
 Esp32 device;
 Camera camera;
-
-
-
+AppConnection appConnection;  // Added BLE AppConnection instance
 
 int menuIndex = 0;
 String menuOptions[] = {"shortDescription.wav", "LongDescription.wav", "Volume.wav", "BatteryLevel.wav", "Settings.wav"};
@@ -172,6 +171,9 @@ void setup()
     }
     Serial.println("SD Card Initialized");
 
+    // Initialize BLE AppConnection (starts advertising and BLE server)
+    appConnection.begin();
+
     // audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
     // audio.setVolume(15);
 
@@ -240,5 +242,10 @@ void loop()
                     break;
                 }
         }
+    }
+    
+    // Optional: Debug - Check BLE connection status and print if connected
+    if (appConnection.isConnected()) {
+        Serial.println("BLE device connected");
     }
 }
