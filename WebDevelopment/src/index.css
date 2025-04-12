@@ -1,20 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
+    /* Sizing */
     --nav-size: 15vh;
     --footer-size: 10vh;
-    --bg: #f8f8f8;
-    --bg-accent: #1c1c1c;
-    --bg-accent-two:#272727;
-    --alt: #17207a;
-    --alt-two: #0a21c0;
-    --alt-three: #3c50d0;
+
+    /* Backgrounds */
+    --bg: #080808;
+    --bg-two: #0f1011;
+    --bg-three: #191a1b;
+    --bg-tint: #141516;
+
+    /* Borders */
+    --line: #37393a;
+    --line-2: #202122;
+    --line-3: #141515;
+    --line-tint: #141516;
+
+    /* Text */
+    --text: #f8f8f8;
+    --text-2: #d0d6e0;
+    --text-3: #8a8f98;
+
+    /* Colors */
+    --alt: #3c50d0;
+    --alt-2: #0a21c0;
+    --alt-3: #17207a;
     
-    /* Hero section gradient colors - complementing our blue theme */
-    --hero-gradient-1: #171f75; /* Deep blue */
-    --hero-gradient-2: #0b3f8e; /* Rich blue */
-    --hero-gradient-3: #2458e6; /* Bright blue */
-    --hero-glow: rgba(41, 98, 255, 0.3); /* Subtle blue glow */
+    /* Main Orb Colors */
+    --hero-gradient-1: #171f75; 
+    --hero-gradient-2: #0b3f8e;
+    --hero-gradient-3: #2458e6;
 }
 
 html {

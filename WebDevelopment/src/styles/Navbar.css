@@ -3,7 +3,8 @@
     position: sticky; 
     top: 0;
     z-index: 500; 
-    transition: background-color 250ms ease-in-out; 
+    transition: background-color 250ms ease-in-out;
+    /* box-shadow: 0px 1px 50px 0px #37393a; */
 }
 
 .navbar.sticky {
@@ -25,20 +26,20 @@
 }
 
 .nav_links {
-    margin-right: 4.2vw;
+    margin-right: 4vw;
 }
 
 .nav_link {
     font-size: 1.1rem;
     color: var(--bg);
-    background-color: var(--bg-accent);
+    background-color: var(--text);
     display: block;
     float: right;
     margin-right: 1rem;
     margin-left: 1rem;
-    margin-top: calc(7.5vh - 1.2rem);
+    margin-top: calc(7.5vh - 1.5rem);
     padding: .6rem 1.2rem .6rem 1.2rem;
-    border: 3px var(--bg-accent-two) solid;
+    border: 3px var(--line) solid;
     border-radius: 15px;
     transition: ease-in-out 250ms;
 }

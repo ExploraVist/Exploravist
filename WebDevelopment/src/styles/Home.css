@@ -6,7 +6,6 @@
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0;
 }
 
 .home_hero_wrapper {
@@ -32,7 +31,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-size: 750px;
+    background-size: 800px;
     /* can be 500px or 1000px as well */
 }
 
@@ -67,13 +66,13 @@
 .home_text_title{
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--bg);
+    color: var(--text);
     margin-bottom: 1rem;
 }
 
 .home_text_desc {
     font-size: 1.25rem;
-    color: var(--bg);
+    color: var(--text);
     margin-bottom: 1rem;
 }
 

@@ -42,5 +42,5 @@
 
 .error_link:hover {
     background-color: var(--bg-accent-two);
-    transition: 250ms ease-in-out; 
+    transition: 250ms ease-in-out;
 }
