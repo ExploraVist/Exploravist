@@ -63,24 +63,24 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <section className='home_hero'>
+    <section className='home_hero' role="region" aria-label="Hero Section">
       <div className='home_hero_wrapper' ref={gridRef}>
-        <div className='hex_grid'>
+        <div className='hex_grid' aria-hidden="true">
           <div className='light' ref={lightRef}></div>
           <div className='grid'></div>
           <div className='grid_fade'></div>
         </div>
         <div className='glass_background' ref={glassRef}>
-          <h1 className='home_text_title'>
+          <h1 className='home_text_title' tabIndex="0">
             See Your World,<br />
             <span>Differently.</span>
           </h1>
-          <p className='home_text_desc'>
+          <p className='home_text_desc' tabIndex="0">
             A wearable device and mobile app empowering blind and visually impaired users through affordable, AI-powered image understanding.
           </p>
         </div>
       </div>
-      <div className='scroll_indicator'>
+      <div className='scroll_indicator' role="presentation" aria-hidden="true">
         <div className='scroll_dot'></div>
       </div>
     </section>

@@ -9,8 +9,10 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar/>
-      <HomeHero />
-      <Product />
+      <main id="main-content" tabIndex="-1">
+        <HomeHero />
+        <Product />
+      </main>
       <Footer />
     </Fragment>
   )

@@ -42,6 +42,7 @@ const Navbar = () => {
 
   return (
     <Fragment>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
         {/* Disable clicks on the logo when faded */}
         <Link to='/' className='navbar_title' style={{ pointerEvents: isSticky ? "none" : "auto" }}>
