@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import '../styles/HomeRoutes.css';
+import '../../styles/home/HomeRoutes.css';
 
 const HomeRoutes = () => {
   const routes = [

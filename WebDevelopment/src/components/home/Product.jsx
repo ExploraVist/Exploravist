@@ -1,11 +1,11 @@
 import React from 'react';
 import { Camera, Edit, Share, Mountain, FileText, Mic, Apple, Pencil, Users, Speech, Search, Sparkles, Bluetooth } from 'lucide-react';
-import '../styles/Product.css';
 import FeatureCard from './FeatureCard';
-import deviceImage from '../imgs/device-image.png';
-import captureUI from '../imgs/capture.png';
-import galleryUI from '../imgs/gallery.png';
-import settingsUI from '../imgs/settings.png';
+import deviceImage from '../../imgs/device-image.png';
+import captureUI from '../../imgs/capture.png';
+import galleryUI from '../../imgs/gallery.png';
+import settingsUI from '../../imgs/settings.png';
+import '../../styles/home/Product.css';
 
 const Product = () => {
   const features = [

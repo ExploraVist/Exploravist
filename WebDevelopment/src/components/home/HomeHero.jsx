@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import '../styles/HomeHero.css'
+import '../../styles/home/HomeHero.css'
 
 const HomeHero = () => {
   const lightRef = useRef(null);

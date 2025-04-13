@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/Partnerships.css';
-import hiveLogo from '../imgs/hive-logo.png';
-import muddLogo from '../imgs/mudd-logo.png';
-import lighthouseLogo from '../imgs/lighthouse-logo.png';
+import hiveLogo from '../../imgs/hive-logo.png';
+import muddLogo from '../../imgs/mudd-logo.png';
+import lighthouseLogo from '../../imgs/lighthouse-logo.png';
+import '../../styles/home/Partnerships.css';
 
 const Partnerships = () => {
   return (
