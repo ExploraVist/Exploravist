@@ -3,15 +3,18 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import HomeHero from '../components/HomeHero'
 import Product from '../components/Product'
-import '../styles/Home.css'
+import Partnerships from '../components/Partnerships'
+import HomeRoutes from '../components/HomeRoutes'
 
 const Home = () => {
   return (
     <Fragment>
-      <Navbar/>
+      <Navbar />
       <main id="main-content" tabIndex="-1">
         <HomeHero />
         <Product />
+        <Partnerships />
+        <HomeRoutes />
       </main>
       <Footer />
     </Fragment>

@@ -36,7 +36,7 @@
     float: right;
     margin-right: 1rem;
     margin-left: 1rem;
-    margin-top: calc(7.5vh - 1.5rem);
+    margin-top: calc(7.5vh - 1.2rem);
     padding: .6rem 1.2rem .6rem 1.2rem;
     border: 3px var(--line) solid;
     border-radius: 15px;

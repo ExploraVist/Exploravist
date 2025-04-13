@@ -1,0 +1,106 @@
+.home-routes {
+  padding-bottom: 10rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.routes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.route-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(
+    to right,
+    var(--bg-two) 0%,
+    transparent 100%
+  );
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    var(--line) 0%,
+    transparent 100%
+  ) 1;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.route-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.route-link:hover,
+.route-link:focus {
+  transform: translateX(10px);
+  border-image: linear-gradient(
+    to right,
+    var(--text) 0%,
+    transparent 100%
+  ) 1;
+}
+
+.route-link:hover::before,
+.route-link:focus::before {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+}
+
+.route-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.route-arrow {
+  color: var(--text-2);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.route-link:hover .route-arrow,
+.route-link:focus .route-arrow {
+  transform: translateX(5px);
+  color: var(--text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-routes {
+    padding: 3rem 1rem;
+  }
+
+  .route-link {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .route-text {
+    font-size: 1.1rem;
+  }
+} 
