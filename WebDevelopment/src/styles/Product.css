@@ -1,0 +1,252 @@
+.product-section {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+/* Device Section */
+.device-section {
+    background: var(--bg);
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.device-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.device-text {
+    color: var(--text);
+}
+
+.device-text blockquote {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--alt);
+}
+
+.device-text blockquote footer {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: var(--text-2);
+}
+
+.device-features {
+    margin-top: 3rem;
+}
+
+.device-features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.device-features p {
+    color: var(--text-2);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item svg {
+    color: var(--alt);
+}
+
+.feature-item span {
+    color: var(--text-2);
+}
+
+.device-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* App Section */
+.app-section {
+    background: var(--bg);
+    padding: 3rem 2rem 6rem;
+    position: relative;
+}
+
+.app-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: var(--text);
+}
+
+.bluetooth-icon {
+    color: var(--alt);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.bluetooth-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.app-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.app-header p {
+    color: var(--text-2);
+    margin-bottom: 3rem;
+}
+
+.app-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.app-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.app-screenshot {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    aspect-ratio: 9/16;
+}
+
+.app-screenshot:hover {
+    transform: translateY(-10px);
+}
+
+.app-screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .app-showcase {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .device-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .device-text blockquote {
+        padding-left: 0;
+        border-left: none;
+        border-bottom: 4px solid var(--alt);
+        padding-bottom: 1.5rem;
+    }
+
+    .app-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .app-header h2 {
+        font-size: 2rem;
+    }
+
+    .device-text blockquote {
+        font-size: 1.5rem;
+    }
+
+    .device-img {
+        max-width: 300px;
+    }
+
+    .app-showcase {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        gap: 1.5rem;
+    }
+
+    .app-features {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .product-section {
+        padding: 0;
+    }
+
+    .device-section,
+    .app-section {
+        padding: 4rem 1rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-header h2 {
+        font-size: 1.75rem;
+    }
+} 
