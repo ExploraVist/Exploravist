@@ -94,7 +94,7 @@ const Footer = () => {
 
       {/* Bottom Note */}
       <div className="footer-bottom" role="contentinfo">
-        <p>© 2023 ExploraVist</p>
+        <p>© 2025 ExploraVist</p>
       </div>
     </footer>
   );

@@ -65,7 +65,7 @@ const Product = () => {
       <div className="app-section" role="region" aria-label="App Features">
         <div className="app-header">
           <Bluetooth className="bluetooth-icon" size={48} aria-hidden="true" />
-          <h2 tabIndex="0">Pair your ExploraVist device with the App with a click</h2>
+          <h2 className="app-pair" tabIndex="0">Pair your ExploraVist device with the App</h2>
           <p tabIndex="0">We believe in simple, minimalist design, built with ease of use in mind.</p>
           
           <div className="app-showcase" role="region" aria-label="App Interface Previews">

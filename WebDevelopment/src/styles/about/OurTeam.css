@@ -1,0 +1,168 @@
+.our_team {
+  padding-bottom: 5rem;
+  background-color: var(--bg);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.our_team_wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.our_team_header {
+  text-align: center;
+  margin-bottom: 5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.our_team_label {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  /* font-weight: 600; */
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.our_team_title {
+  font-size: 3.5rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.our_team_description {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.founders_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+/* Large screens (4 columns) */
+@media (max-width: 1400px) {
+  .founders_grid {
+    gap: 2rem;
+  }
+  
+  .our_team_title {
+    font-size: 3rem;
+  }
+}
+
+/* Medium screens (2 columns) */
+@media (max-width: 1024px) {
+  .our_team {
+    padding: 6rem 0;
+  }
+
+  .founders_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .our_team_title {
+    font-size: 2.75rem;
+  }
+
+  .our_team_description {
+    font-size: 1.125rem;
+  }
+
+  .our_team_header {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Small screens (1 column) */
+@media (max-width: 640px) {
+  .our_team {
+    padding: 5rem 0;
+  }
+
+  .our_team_wrapper {
+    padding: 0 1.25rem;
+  }
+
+  .founders_grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .our_team_title {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .our_team_label {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .our_team_description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .our_team_header {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .our_team_title,
+  .our_team_description {
+    cursor: default;
+  }
+}
+
+/* Focus States for Accessibility */
+.our_team_title:focus,
+.our_team_description:focus {
+  outline: 2px solid var(--line);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Ensure smooth transitions between breakpoints */
+.founders_grid {
+  transition: grid-template-columns 0.3s ease;
+}
+
+/* Print styles */
+@media print {
+  .our_team {
+    padding: 2rem 0;
+    background-color: white;
+  }
+  
+  .founders_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+} 
