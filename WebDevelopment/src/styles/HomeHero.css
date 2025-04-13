@@ -153,6 +153,10 @@
     .home_text_title {
         font-size: 3rem;
     }
+
+    .hex_grid .grid {
+        background-size: 750px;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -186,7 +190,7 @@
     }
 
     .hex_grid .grid {
-        background-size: 400px;
+        background-size: 700px;
     }
 
     .home_text_title {
@@ -216,7 +220,7 @@
     }
 
     .hex_grid .grid {
-        background-size: 300px;
+        background-size: 500px;
     }
 
     .home_text_title {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera, Edit, Share, Mountain, FileText, Mic, Apple, PenTool, Users, Speaker, Search, Sparkles, Bluetooth } from 'lucide-react';
+import { Camera, Edit, Share, Mountain, FileText, Mic, Apple, Pencil, Users, Speech, Search, Sparkles, Bluetooth } from 'lucide-react';
 import '../styles/Product.css';
 import FeatureCard from './FeatureCard';
 import deviceImage from '../imgs/device-image.png';
@@ -12,11 +12,11 @@ const Product = () => {
     { icon: Mountain, title: 'Describe landscapes', description: 'Describe landscapes, colors of clothing, and more' },
     { icon: FileText, title: 'Text Recognition', description: 'Read any text in handwriting + different fonts' },
     { icon: Mic, title: 'Voice Control', description: 'Detailed Image Descriptions' },
-    { icon: Apple, title: 'Nutrition Scanner', description: 'Scan Nutrition Labels' },
+    { icon: Apple, title: 'Nutrition Scanner', description: 'Scan nutrition labels' },
     { icon: Edit, title: 'Customization', description: 'Change descriptions to add your own information' },
     { icon: Users, title: 'Share', description: 'Share images with your family and friends' },
-    { icon: Speaker, title: 'Voice Selection', description: 'Choose from a selection of voices' },
-    { icon: Search, title: 'Smart Search', description: 'Semantic Image Search' },
+    { icon: Speech, title: 'Voice Selection', description: 'Choose from a selection of voices' },
+    { icon: Search, title: 'Smart Search', description: 'Voice prompted semantic image search' },
     { icon: Sparkles, title: 'Future Updates', description: 'We are committed to adding the features YOU want' }
   ];
 
@@ -27,7 +27,7 @@ const Product = () => {
         <div className="device-content">
           <div className="device-text">
             <blockquote tabIndex="0" aria-label="Quote from CTO">
-              <p>"Linear changes in ease of use lead to exponential changes in usability."</p>
+              <p>"Linear increases in ease of use lead to exponential increases in usability."</p>
               <footer>
                 <cite>– Dominick Quaye, CTO</cite>
               </footer>
@@ -41,7 +41,7 @@ const Product = () => {
                   <span>Capture moments</span>
                 </div>
                 <div className="feature-item" role="listitem" tabIndex="0">
-                  <PenTool size={24} aria-hidden="true" />
+                  <Pencil size={24} aria-hidden="true" />
                   <span>Take notes</span>
                 </div>
                 <div className="feature-item" role="listitem" tabIndex="0">

@@ -4,7 +4,6 @@
     top: 0;
     z-index: 500; 
     transition: background-color 250ms ease-in-out;
-    /* box-shadow: 0px 1px 50px 0px #37393a; */
 }
 
 .navbar.sticky {
