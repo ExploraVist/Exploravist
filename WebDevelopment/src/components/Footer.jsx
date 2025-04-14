@@ -22,8 +22,8 @@ const Footer = () => {
       <div className="footer-content">
         {/* Left Column - Mission */}
         <div className="footer-column" role="region" aria-label="Mission Statement">
-          <h2 className="footer-heading">ExploraVist</h2>
-          <p className="footer-mission">
+          <h2 className="footer-heading" tabIndex="0">ExploraVist</h2>
+          <p className="footer-mission" tabIndex="0">
             Empowering the blind and visually impaired with affordable, AI-powered assistive tech.
           </p>
           <div className="footer-spark" role="presentation" aria-hidden="true">
