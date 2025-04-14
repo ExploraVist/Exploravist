@@ -3,6 +3,8 @@
     width: 90vw;
     margin: auto;
     color: var(--bg);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .error_wrapper {
@@ -12,7 +14,7 @@
     width: 90vw;
     height: 70vh;
     max-width: 90vw;
-    background-color: var(--bg-accent);
+    background-color: var(--text);
     border-radius: 15px;
 }
 
@@ -32,15 +34,17 @@
 .error_link {
     display: flex;
     justify-content: center;
+    color: var(--text);
+    background-color: var(--text);
     color: var(--bg);
-    background-color: var(--bg-accent);
     font-size: 1.2rem;
-    padding: .4rem .6rem;
-    border: .15rem solid var(--bg);
+    padding: .8rem 1rem;
+    border: .15rem solid var(--line);
     border-radius: 15px;
 }
 
 .error_link:hover {
-    background-color: var(--bg-accent-two);
+    background-color: var(--bg);
+    color: var(--text);
     transition: 250ms ease-in-out;
 }

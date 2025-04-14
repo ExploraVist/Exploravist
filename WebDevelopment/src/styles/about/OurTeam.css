@@ -1,10 +1,10 @@
 .our_team {
-  padding-bottom: 5rem;
   background-color: var(--bg);
   width: 100%;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  padding-bottom: 8rem;
 }
 
 .our_team_wrapper {
@@ -64,7 +64,7 @@
   .founders_grid {
     gap: 2rem;
   }
-  
+
   .our_team_title {
     font-size: 3rem;
   }
@@ -135,6 +135,7 @@
 
 /* Touch device optimizations */
 @media (hover: none) {
+
   .our_team_title,
   .our_team_description {
     cursor: default;
@@ -160,9 +161,60 @@
     padding: 2rem 0;
     background-color: white;
   }
-  
+
   .founders_grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-} 
+}
+
+/* New Additional Team Sections Styles */
+.additional_team_sections {
+  padding-top: 4rem;
+}
+
+.section_title {
+  font-size: 2.5rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section_description {
+  font-size: 1.125rem;
+  color: var(--text-2);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.team_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.team_list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-3)
+}
+
+.advisor_subsections {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.technical_advisors,
+.vision_advisors {
+  flex: 1;
+  min-width: 200px;
+}
+
+.subsection_title {
+  font-size: 1.75rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
