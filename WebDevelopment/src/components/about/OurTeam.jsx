@@ -107,8 +107,8 @@ const OurTeam = () => {
               <div className="vision_advisors">
                 <h4 className="subsection_title" tabIndex="0">Vision &amp; Community</h4>
                 <ul className="team_list">
-                  <li tabIndex="0">James Warnken</li>
-                  <li tabIndex="0">Arturo (LastName)</li>
+                  <li tabIndex="0">Lighthouse for the Blind</li>
+                  <li tabIndex="0">Arturo LastName</li>
                 </ul>
               </div>
             </div>
