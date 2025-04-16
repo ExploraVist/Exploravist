@@ -1,4 +1,21 @@
 /* Outer container for the update page */
+.update-back-section {
+    justify-content: center;
+    height: 5vh;
+}
+
+.update-back-button {
+    font-size: 1.1rem;
+    color: var(--bg);
+    background-color: var(--text);
+    display: block;
+    float: left;
+    padding: .6rem 1.2rem .6rem 1.2rem;
+    border: 3px var(--line) solid;
+    border-radius: 15px;
+    transition: ease-in-out 250ms;
+}
+
 .update-page {
     max-width: 800px;
     margin: 0 auto;

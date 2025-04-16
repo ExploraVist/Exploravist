@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('dquaye@hmc.edu')
-      .then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-      })
-      .catch(err => {
-        console.error('Failed to copy: ', err);
-      });
-  };
+  
+    const handleCopyEmail = () => {
+      navigator.clipboard.writeText('exploravist@exploravist.net')
+        .then(() => {
+          alert("Email address copied to clipboard!");
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+    };
 
   return (
     <footer className="footer" role="contentinfo">
@@ -39,7 +37,7 @@ const Footer = () => {
               <li><Link to="/" className="footer-link" tabIndex="0">Home</Link></li>
               <li><Link to="/about" className="footer-link" tabIndex="0">About</Link></li>
               <li><Link to="/updates" className="footer-link" tabIndex="0">Updates</Link></li>
-              <li><Link to="/get-involved" className="footer-link" tabIndex="0">Get Involved</Link></li>
+              <li><Link to="/contact" className="footer-link" tabIndex="0">Get Involved</Link></li>
             </ul>
           </nav>
         </div>
@@ -84,7 +82,7 @@ const Footer = () => {
             <p
               className="email-link"
               tabIndex="0"
-              onClick={() => handleCopyEmail}
+              onClick={handleCopyEmail}
             >
               exploravist@exploravist.com
             </p>

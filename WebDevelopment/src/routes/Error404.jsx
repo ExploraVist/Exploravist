@@ -15,7 +15,7 @@ const Error404 = () => {
                 <div className='error_wrapper'>
                     <Lottie className='error_animation' animationData={errorAnimation} loop={true} />
                     <h1 className='error_header'>Error 404</h1>
-                    <p>Page Not Found...</p>
+                    <p className='error_message'>Page Not Found...</p>
                     <p className='error_text'><Link className='error_link' path='/'>Home</Link></p>
                 </div>
             </main>

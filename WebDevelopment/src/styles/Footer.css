@@ -114,6 +114,13 @@
     color: var(--text-2);
 }
 
+.footer-copy {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-2);
+}
+
 .email-link {
     color: var(--text-2);
     text-decoration: none;

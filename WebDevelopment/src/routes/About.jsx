@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import AboutHero from '../components/about/AboutHero'
-import second from '../components/about/OurTeam'
+import OurTeam from '../components/about/OurTeam'
 
 const About = () => {
   return (

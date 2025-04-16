@@ -32,6 +32,12 @@
     margin-top: .3rem;
 }
 
+.error_message {
+    margin-bottom: 2.2rem;
+    color: var(--text-3);
+    font-size: 1.125rem;
+}
+
 .error_link {
     display: flex;
     justify-content: center;

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
 import { updates } from '../data/updatesData';
+import { Link } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/updates/UpdatesPage.css'
@@ -10,7 +11,6 @@ const UpdatesPage = () => {
 
   const update = updates.find(u => u.slug === slug);
 
-  // If no matching update is found, show a message
   if (!update) {
     return (
       <Fragment>
@@ -23,7 +23,6 @@ const UpdatesPage = () => {
     );
   }
 
-  // Helper function to render each section based on type
   const renderSection = (section, index) => {
     switch (section.type) {
       case 'paragraph':
@@ -36,7 +35,7 @@ const UpdatesPage = () => {
         return (
           <div key={index} className="update-image-link">
             <a href={section.link} target="_blank" rel="noopener noreferrer">
-              <img src={`/imgs/${section.imageKey}.jpg`} alt={section.content || 'Update Image'} />
+              <img src={`/imgs/${section.imageKey}.jpg`} alt={section.content || 'Update Image'} tabIndex="0"/>
             </a>
           </div>
         );
@@ -44,7 +43,7 @@ const UpdatesPage = () => {
         return (
           <p key={index}>
             {section.content}{' '}
-            <a href={section.linkUrl} target="_blank" rel="noopener noreferrer">
+            <a href={section.linkUrl} target="_blank" rel="noopener noreferrer" tabIndex="0">
               {section.linkText}
             </a>
           </p>
@@ -53,7 +52,7 @@ const UpdatesPage = () => {
         return (
           <ul key={index}>
             {section.items.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <li key={idx} tabIndex="0">{item}</li>
             ))}
           </ul>
         );
@@ -65,12 +64,15 @@ const UpdatesPage = () => {
   return (
     <div>
       <Navbar />
+      <div className="update-back-section">
+        <Link className="update-back-button" to="/updates">BACK</Link>
+      </div>
       <div className="update-page">
         <div className="update-header">
-          <h1>{update.title}</h1>
-          <p className="update-date">Posted on {update.date}</p>
+          <h1 tabIndex="0">{update.title}</h1>
+          <p className="update-date" tabIndex="0">Posted on {update.date}</p>
         </div>
-        <div className="update-content">
+        <div className="update-content" tabIndex="0">
           {update.sections.map((section, idx) => renderSection(section, idx))}
         </div>
       </div>
