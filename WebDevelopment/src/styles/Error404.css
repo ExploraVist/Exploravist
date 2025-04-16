@@ -2,9 +2,10 @@
     height: 75vh;
     width: 90vw;
     margin: auto;
-    color: var(--bg);
     padding-top: 2rem;
     padding-bottom: 3rem;
+    color: var(--text);
+    background-color: var(--bg);
 }
 
 .error_wrapper {
@@ -14,7 +15,6 @@
     width: 90vw;
     height: 70vh;
     max-width: 90vw;
-    background-color: var(--text);
     border-radius: 15px;
 }
 

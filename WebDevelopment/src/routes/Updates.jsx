@@ -2,13 +2,13 @@ import React, { Fragment, useState } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import '../styles/Updates.css';
+import UpdatesHero from '../components/updates/UpdatesHero';
 
 const Updates = () => {
   return (
     <Fragment>
       <Navbar/>
-      <p>Updates</p>
+      <UpdatesHero/>
       <Footer/>
     </Fragment>
   );

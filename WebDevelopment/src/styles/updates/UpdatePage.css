@@ -1,0 +1,74 @@
+/* src/styles/updates/UpdatePage.css */
+
+/* Outer container for the update page */
+.update-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* Header for the update (title and date) */
+.update-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+}
+
+/* Date styling */
+.update-date {
+    color: var(--text-3);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Content area */
+.update-content {
+    margin-top: 1rem;
+}
+
+/* Headings from rendered markdown/sections */
+.update-page h1,
+.update-page h2,
+.update-page h3,
+.update-page h4,
+.update-page h5,
+.update-page h6 {
+    color: var(--text);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+/* Paragraphs */
+.update-page p {
+    margin-bottom: 1rem;
+}
+
+/* Lists */
+.update-page ul,
+.update-page ol {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+/* Links */
+.update-page a {
+    color: var(--alt);
+    text-decoration: underline;
+}
+
+/* Images */
+.update-image-link img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 4px solid var(--text);
+    border-radius: 6px;
+}

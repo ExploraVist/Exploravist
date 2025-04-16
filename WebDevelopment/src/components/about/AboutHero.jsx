@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Play, Pause } from 'lucide-react';
 import audioFile from '../../assets/audio.mp3';
-import '../../styles/about/AboutHero.css';
+import '../../styles/about/AboutHero.css'
 
 const AboutHero = () => {
   const [isPlaying, setIsPlaying] = useState(false);

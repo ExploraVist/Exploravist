@@ -1,6 +1,7 @@
 .our_team {
   background-color: var(--bg);
-  width: 100%;
+  width: 95vw;
+  max-width: 95vw;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -29,7 +30,6 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-3);
-  /* font-weight: 600; */
   display: block;
   margin-bottom: 1.25rem;
 }

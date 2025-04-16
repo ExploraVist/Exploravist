@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Fragment>
         <Navbar />
-        <main id="main-content" tabIndex="-1">
+        <main id="main-content" className='about-wrapper' tabIndex="0">
             <AboutHero />
             <OurTeam />
         </main>

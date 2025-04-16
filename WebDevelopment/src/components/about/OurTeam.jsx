@@ -68,15 +68,15 @@ const OurTeam = () => {
             <h3 className="section_title" tabIndex="0">Team Members</h3>
             <ul className="team_list">
               <li tabIndex="0">Nithya Yeluri - Embedded</li>
+              <li tabIndex="0">Max Conine - Embedded</li>
               <li tabIndex="0">Nico Villalba - App Development</li>
-              <li tabIndex="0">Max Conine - Embedded Intern</li>
               <li tabIndex="0">Ruixi Xiang - Marketing Intern</li>
               <li tabIndex="0">Alex Chacon - Marketing Intern</li>
               <li tabIndex="0">William Koh - Local LLM Development Intern</li>
             </ul>
           </section>
 
-          {/* Research &amp; Development Clinic Team Section */}
+          {/* Research & Development Clinic Team Section */}
           <section className="rd_team">
             <h3 className="section_title" tabIndex="0">Research &amp; Development Clinic Team</h3>
             <p className="section_description" tabIndex="0">
@@ -88,7 +88,7 @@ const OurTeam = () => {
               <li tabIndex="0">Daniel Fajardo</li>
               <li tabIndex="0">Massin Ihs</li>
               <li tabIndex="0">Ket Hollingsworth</li>
-              <li tabIndex="0"> Dominick Quaye</li>
+              <li tabIndex="0">Dominick Quaye</li>
               <li tabIndex="0">Mauricio Bravo</li>
             </ul>
           </section>

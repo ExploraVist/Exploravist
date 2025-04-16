@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      <main id="main-content" tabIndex="-1">
-        <HomeHero />
+      <main id="main-content" tabIndex="0">
+        <Home Hero />
         <Product />
         <Partnerships />
         <HomeRoutes />

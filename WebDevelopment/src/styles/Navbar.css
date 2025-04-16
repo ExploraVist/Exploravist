@@ -93,13 +93,13 @@
 
 .nav_mobile_menu_x_btn {
     color: var(--bg);
-    background-color: var(--bg-accent);
+    background-color: var(--bg);
     float: right;
     margin-right: 2rem;
     margin-top: auto;
     margin-bottom: auto;
     padding: .2rem .4rem .2rem .4rem;
-    border: 3px var(--bg-accent-two) solid;
+    border: 3px var(--bg) solid;
     border-radius: 15px;
     transition: ease-in-out 250ms;
     /* backdrop-filter: blur(4px);

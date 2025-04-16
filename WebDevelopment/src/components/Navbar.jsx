@@ -63,7 +63,7 @@ const Navbar = () => {
               animate={{ opacity: isSticky ? 0 : 1 }}
               transition={{ duration: 0.3 }}
             >
-              {/* <Link to='/updates' className='nav_link'>UPDATES</Link> */}
+              <Link to='/updates' className='nav_link'>UPDATES</Link>
               <Link to='/about' className='nav_link'>ABOUT</Link>
             </motion.div>
           }
@@ -84,7 +84,7 @@ const Navbar = () => {
                     <p className='nav_mobile_menu_title'>Menu</p>
                     <Link to='/' className={`nav_mobile_menu_link ${window.location.pathname === '/' ? 'nav_mobile_menu_active_link' : ''}`}>Home</Link>
                     <Link to='/about' className={`nav_mobile_menu_link ${window.location.pathname === '/about' ? 'nav_mobile_menu_active_link' : ''}`}>About</Link>
-                    {/* <Link to='/updates' className={`nav_mobile_menu_link ${window.location.pathname === '/updates' ? 'nav_mobile_menu_active_link' : ''}`}>Updates</Link> */}
+                    <Link to='/updates' className={`nav_mobile_menu_link ${window.location.pathname === '/updates' ? 'nav_mobile_menu_active_link' : ''}`}>Updates</Link>
                     <div className='nav_mobile_menu_svg' />
                   </div>
                 </div>
