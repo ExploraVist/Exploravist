@@ -12,7 +12,7 @@
 }
 
 .about_hero_wrapper {
-    max-width: 1200px;
+    max-width: 80vw;
     margin: 0 auto;
     position: relative;
     z-index: 1;

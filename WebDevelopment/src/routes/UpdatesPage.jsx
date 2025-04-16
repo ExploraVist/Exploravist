@@ -1,10 +1,9 @@
-// src/routes/updates/Gen01Update.jsx
 import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
-import { updates } from '../../data/updatesData';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import '../../styles/updates/UpdatePage.css';
+import { updates } from '../data/updatesData';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import '../styles/updates/UpdatesPage.css'
 
 const UpdatesPage = () => {
   const { slug } = useParams();

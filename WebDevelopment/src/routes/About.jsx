@@ -2,13 +2,13 @@ import React, { Fragment } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import AboutHero from '../components/about/AboutHero'
-import OurTeam from '../components/about/OurTeam'
+import second from '../components/about/OurTeam'
 
 const About = () => {
   return (
     <Fragment>
         <Navbar />
-        <main id="main-content" className='about-wrapper' tabIndex="0">
+        <main id="main-content" tabIndex="-1">
             <AboutHero />
             <OurTeam />
         </main>

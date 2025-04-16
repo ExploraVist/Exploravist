@@ -3,7 +3,7 @@
     width: 90vw;
     margin: auto;
     padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 50rem;
     color: var(--text);
     background-color: var(--bg);
 }
@@ -15,6 +15,7 @@
     width: 90vw;
     height: 70vh;
     max-width: 90vw;
+    background-color: var(--bg);
     border-radius: 15px;
 }
 

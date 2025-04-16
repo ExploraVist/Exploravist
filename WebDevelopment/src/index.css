@@ -65,8 +65,8 @@ a {
     letter-spacing: .1rem;
 }
 
-/* *,
-*::before,
-*::after {
-    box-sizing: border-box;
-} */
+*,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }

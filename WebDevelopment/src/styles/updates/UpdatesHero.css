@@ -145,7 +145,7 @@
     background-color: var(--text-2);
 }
 
-.node_link:focus-visible     .node_inner_circle {
+.node_link:focus-visible .node_inner_circle {
     background-color: var(--alt);
     filter: brightness(1.2);
 }
