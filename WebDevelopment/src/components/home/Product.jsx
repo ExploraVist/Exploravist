@@ -3,8 +3,8 @@ import { Camera, Edit, Share, Mountain, FileText, Mic, Apple, Pencil, Users, Spe
 import FeatureCard from './FeatureCard';
 import deviceImage from '../../imgs/device-image.png';
 import captureUI from '../../imgs/capture.png';
+import editUI from '../../imgs/edit.png';
 import galleryUI from '../../imgs/gallery.png';
-import settingsUI from '../../imgs/settings.png';
 import '../../styles/home/Product.css';
 
 const Product = () => {
@@ -76,16 +76,16 @@ const Product = () => {
                 alt="Capture Interface showing camera view with capture button and settings options" 
               />
             </div>
+            <div className="app-screenshot" tabIndex="0" role="img" aria-label="Settings Interface">
+              <img 
+                src={editUI} 
+                alt="Capture Interface showing an image with a specific question and its response" 
+              />
+            </div>
             <div className="app-screenshot" tabIndex="0" role="img" aria-label="Gallery Interface">
               <img 
                 src={galleryUI} 
                 alt="Gallery Interface displaying captured images in a grid layout" 
-              />
-            </div>
-            <div className="app-screenshot" tabIndex="0" role="img" aria-label="Settings Interface">
-              <img 
-                src={settingsUI} 
-                alt="Settings Interface showing customization options for voice, notifications, and device settings" 
               />
             </div>
           </div>
