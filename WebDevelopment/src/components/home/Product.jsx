@@ -51,11 +51,12 @@ const Product = () => {
               </div>
             </div>
           </div>
-          <div className="device-image" role="img" aria-label="ExploraVist Device Preview">
+          <div className="device-image" role="img" aria-label="ExploraVist Device Preview">   
             <img 
               src={deviceImage} 
               alt="ExploraVist Device attached to glasses showing the camera, speaker, and microphone components" 
               className="device-img" 
+              tabIndex="0"
             />
           </div>
         </div>

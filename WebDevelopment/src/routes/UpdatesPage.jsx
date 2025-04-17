@@ -4,6 +4,7 @@ import { updates } from '../data/updatesData';
 import { Link } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { CornerUpLeft } from 'lucide-react';
 import '../styles/updates/UpdatesPage.css'
 
 const UpdatesPage = () => {
@@ -65,7 +66,8 @@ const UpdatesPage = () => {
     <div>
       <Navbar />
       <div className="update-back-section">
-        <Link className="update-back-button" to="/updates">BACK</Link>
+        <span className="update-spacer" aria-hidden="true" />
+        <Link className="update-back-button" to="/updates" aria-label='Back to Updates'><CornerUpLeft size={24} /></Link>
       </div>
       <div className="update-page">
         <div className="update-header">

@@ -117,8 +117,8 @@
     padding: 1rem;
     border: 2px solid var(--text);
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 5rem;
+    height: 5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -153,7 +153,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 900px;
+    max-width: 2000px;
     margin: 0 auto 4rem;
 }
 
@@ -163,7 +163,7 @@
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    aspect-ratio: 9/16;
+    /* aspect-ratio: 9/16; */
 }
 
 .app-screenshot:hover {
