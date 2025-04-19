@@ -119,6 +119,7 @@
     align-items: center;
     gap: 1.5rem;
     margin-top: .5rem;
+    border: 1px red solid;
 }
 
 .audio_button {
