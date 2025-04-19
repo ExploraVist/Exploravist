@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, Twitter, Github, Mail } from 'lucide-react';
+import { Instagram, Linkedin, Github, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
@@ -57,14 +57,14 @@ const Footer = () => {
               <Instagram size={24} />
             </a>
             <a 
-              href="https://twitter.com/exploravist" 
+              href="https://www.linkedin.com/company/exploravist" 
               className="social-link" 
               target="_blank" 
               rel="noopener noreferrer"
               tabIndex="0"
-              aria-label="Follow us on Twitter"
+              aria-label="Follow us on LinkedIn"
             >
-              <Twitter size={24} />
+              <Linkedin size={24} />
             </a>
             <a 
               href="https://github.com/exploravist" 

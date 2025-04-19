@@ -1,6 +1,6 @@
 import React from 'react';
 import FounderCard from './FounderCard';
-import founderImage from '../../imgs/founder.png';
+import mauImage from '../../imgs/mau.jpg';
 import ketImage from '../../imgs/ket.jpg';
 import domImage from '../../imgs/dom.jpg';
 import bilalImage from '../../imgs/bilal.jpg';
@@ -30,7 +30,7 @@ const OurTeam = () => {
       role: "CCO",
       linkedIn: "https://www.linkedin.com/in/mauriciobravoguzman/",
       audioClip: '#',
-      image: founderImage
+      image: mauImage
     },
     {
       name: "Bilal Abraham",
