@@ -4,6 +4,9 @@ import founderImage from '../../imgs/founder.png';
 import ketImage from '../../imgs/ket.jpg';
 import domImage from '../../imgs/dom.jpg';
 import bilalImage from '../../imgs/bilal.jpg';
+import ketIntro from '../../assets/ket.mp3';
+import domIntro from '../../assets/dom.mp3';
+import bilalIntro from '../../assets/bilal.mp3';
 import '../../styles/about/OurTeam.css';
 
 const OurTeam = () => {
@@ -12,28 +15,28 @@ const OurTeam = () => {
       name: "Ket Hollingsworth",
       role: "CEO",
       linkedIn: "https://www.linkedin.com/in/ket-hollingsworth/",
-      audioClip: "#",
+      audioClip: ketIntro,
       image: ketImage
     },
     {
       name: "Dominick Quaye",
       role: "CTO",
       linkedIn: "https://www.linkedin.com/in/dominick-q-907baa210/",
-      audioClip: "#",
+      audioClip: domIntro,
       image: domImage
     },
     {
       name: "Mauricio Bravo",
       role: "CCO",
       linkedIn: "https://www.linkedin.com/in/mauriciobravoguzman/",
-      audioClip: "#",
+      audioClip: '#',
       image: founderImage
     },
     {
       name: "Bilal Abraham",
       role: "CTO",
       linkedIn: "https://www.linkedin.com/in/bilal-abraham/",
-      audioClip: "#",
+      audioClip: bilalIntro,
       image: bilalImage
     }
   ];
