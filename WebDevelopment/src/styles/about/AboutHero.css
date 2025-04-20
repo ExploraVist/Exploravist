@@ -108,7 +108,7 @@
 .about_hero_origin {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: .5rem;
     align-items: center;
     text-align: center;
 }
@@ -117,14 +117,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    margin-top: .5rem;
 }
 
 .audio_button {
     display: flex;
     align-items: center;
-    gap: 1rem;
     padding: 1rem 2rem;
     background-color: var(--bg-two);
     border: 2px solid var(--line);
@@ -149,11 +146,6 @@
 .audio_text {
     font-size: 1.1rem;
     font-weight: 500;
-}
-
-.audio_description {
-    color: var(--text-2);
-    font-size: 1rem;
 }
 
 /* Responsive Design */

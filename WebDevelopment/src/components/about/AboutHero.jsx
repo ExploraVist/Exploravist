@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Play, Pause } from 'lucide-react';
-import audioFile from '../../assets/audio.mp3';
+import howDidWeStart from '../../assets/exploravist_start.mp3';
 import '../../styles/about/AboutHero.css';
 
 const AboutHero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio] = useState(new Audio(audioFile));
+  const [audio] = useState(new Audio(howDidWeStart));
 
   const toggleAudio = () => {
     if (isPlaying) {
@@ -75,6 +75,9 @@ const AboutHero = () => {
               How did ExploraVist start?
             </h2>
             <div className="audio_player" role="region" aria-label="Origin Story Audio Player">
+              <div className="audio_description" tabIndex="0">
+                Listen to our founders share how ExploraVist came to be
+              </div>
               <button 
                 className="audio_button" 
                 onClick={toggleAudio}
@@ -90,9 +93,7 @@ const AboutHero = () => {
                   {isPlaying ? "Pause Story" : "Play Story"}
                 </span>
               </button>
-              <div className="audio_description" tabIndex="0">
-                Listen to our founders share how ExploraVist came to be
-              </div>
+              
             </div>
           </div>
         </div>
