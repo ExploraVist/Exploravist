@@ -123,6 +123,7 @@
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
+    gap: 1rem;
     background-color: var(--bg-two);
     border: 2px solid var(--line);
     border-radius: 50px;
