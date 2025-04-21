@@ -75,9 +75,6 @@ const AboutHero = () => {
               How did ExploraVist start?
             </h2>
             <div className="audio_player" role="region" aria-label="Origin Story Audio Player">
-              <div className="audio_description" tabIndex="0">
-                Listen to our founders share how ExploraVist came to be
-              </div>
               <button 
                 className="audio_button" 
                 onClick={toggleAudio}

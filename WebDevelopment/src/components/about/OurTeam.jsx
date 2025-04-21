@@ -75,7 +75,6 @@ const OurTeam = () => {
               <li tabIndex="0">Nico Villalba - App Development</li>
               <li tabIndex="0">Ruixi Xiang - Marketing Intern</li>
               <li tabIndex="0">Alex Chacon - Marketing Intern</li>
-              <li tabIndex="0">William Koh - Local LLM Development Intern</li>
             </ul>
           </section>
 
