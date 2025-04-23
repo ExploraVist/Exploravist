@@ -102,7 +102,7 @@ const OurTeam = () => {
               <div className="technical_advisors">
                 <h4 className="subsection_title" tabIndex="0">Technical</h4>
                 <ul className="team_list">
-                  <li tabIndex="0">Aashita Kesinwari</li>
+                  <li tabIndex="0">Aashita Kesarwani</li>
                   <li tabIndex="0">Tristan Huang</li>
                 </ul>
               </div>
