@@ -21,7 +21,7 @@ const WaitlistSignup = () => {
       });
 
       if (res.ok) {
-        alert('Thank you for joining! We\'ll reach out shortly with updates.');
+        alert("Thank you for joining! We'll reach out shortly with updates.");
         setEmail('');
       } else {
         alert('Something went wrong. Please try again.');
