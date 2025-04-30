@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleResize = () => {
     if (window.innerWidth <= 850) {
@@ -21,8 +23,19 @@ const Navbar = () => {
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 0) setSticky(true);
-    else setSticky(false);
+    const currentScrollY = window.scrollY;
+    const threshold = 100;
+    
+    if (currentScrollY > lastScrollY && currentScrollY > threshold) {
+      // Scrolling down and past threshold
+      setIsVisible(false);
+    } else {
+      // Scrolling up or not past threshold
+      setIsVisible(true);
+    }
+    
+    setLastScrollY(currentScrollY);
+    setSticky(currentScrollY > 0);
   };
 
   const toggleMobileMenu = () => {
@@ -38,12 +51,12 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <Fragment>
       <a href="#main-content" className="skip-link">Skip to main content</a>
-      <div className="navbar_container">
+      <div className={`navbar_container ${isVisible ? 'visible' : 'hidden'}`}>
         <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
           <Link to='/' className='navbar_title'>
             <img 

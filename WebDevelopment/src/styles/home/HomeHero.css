@@ -7,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    padding-top: calc(var(--nav-size) + 2rem);
 }
 
 .home_hero_wrapper {

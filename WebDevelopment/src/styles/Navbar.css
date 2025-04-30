@@ -4,9 +4,18 @@
     justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 500;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar_container.visible {
+    transform: translateY(0);
+}
+
+.navbar_container.hidden {
+    transform: translateY(-100%);
 }
 
 .navbar {
