@@ -231,4 +231,10 @@
     .scroll_indicator {
         display: none;
     }
+}
+
+@media only screen and (max-width: 850px) {
+    .home_hero {
+        padding-top: 1vh;
+    }
 } 

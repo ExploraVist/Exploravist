@@ -16,6 +16,8 @@ const Navbar = () => {
     if (window.innerWidth <= 850) {
       setMobileMenu(true);
       setMobileMenuVisible(false);
+      // Always show navbar on mobile
+      setIsVisible(true);
     } else {
       setMobileMenu(false);
       setMobileMenuVisible(false);
@@ -26,12 +28,13 @@ const Navbar = () => {
     const currentScrollY = window.scrollY;
     const threshold = 100;
     
-    if (currentScrollY > lastScrollY && currentScrollY > threshold) {
-      // Scrolling down and past threshold
-      setIsVisible(false);
-    } else {
-      // Scrolling up or not past threshold
-      setIsVisible(true);
+    // Only apply disappearing behavior on desktop
+    if (!isMobileMenu) {
+      if (currentScrollY > lastScrollY && currentScrollY > threshold) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
     }
     
     setLastScrollY(currentScrollY);
@@ -51,7 +54,7 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isMobileMenu]);
 
   return (
     <Fragment>

@@ -103,7 +103,7 @@
     border-radius: 5px;
     color: var(--text-2);
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 5px;
 }
 
 .mobile_menu_button:hover {
@@ -112,12 +112,14 @@
 
 @media only screen and (max-width: 850px) {
     .navbar_container {
-        padding: 0.5rem;
+        position: sticky;
+        transform: none !important;
+        padding: 0;
     }
 
     .navbar {
-        padding: 0 .5rem;
-        width: 90vw;
+        width: 95vw;
+        margin: 0.5rem auto;
     }
 
     .nav_logo {
