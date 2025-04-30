@@ -76,7 +76,7 @@ const HomeHero = () => {
             <span>Differently.</span>
           </h1>
           <p className='home_text_desc' tabIndex="0">
-            A wearable device and mobile app empowering blind and visually impaired users through affordable, AI-powered image understanding.
+            A wearable device and mobile app empowering visually impaired users through affordable, AI-powered image understanding.
           </p>
         </div>
       </div>

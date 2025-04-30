@@ -1,0 +1,144 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(8, 8, 8, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    overflow: hidden;
+}
+
+.falling-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.dot {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.635);
+    border-radius: 50%;
+    top: -20px;
+    animation: fallAndSway 8s linear infinite;
+}
+
+.dot:nth-child(1) { left: 10%; top: -20px; animation-delay: 0s; }
+.dot:nth-child(2) { left: 20%; top: -20px; animation-delay: 1s; }
+.dot:nth-child(3) { left: 30%; top: -20px; animation-delay: 2s; }
+.dot:nth-child(4) { left: 40%; top: -20px; animation-delay: 3s; }
+.dot:nth-child(5) { left: 50%; top: -20px; animation-delay: 4s; }
+.dot:nth-child(6) { left: 60%; top: -20px; animation-delay: 5s; }
+.dot:nth-child(7) { left: 70%; top: -20px; animation-delay: 6s; }
+.dot:nth-child(8) { left: 80%; top: -20px; animation-delay: 7s; }
+.dot:nth-child(9) { left: 90%; top: -20px; animation-delay: 8s; }
+
+@keyframes fallAndSway {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.635;
+    }
+    90% {
+        opacity: 0.635;
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px);
+        opacity: 0;
+    }
+}
+
+.modal-content {
+    background-color: var(--bg-two);
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    transform: translateY(20px);
+    animation: slideUp 0.3s ease forwards;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    color: var(--text);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.modal-message {
+    color: var(--text-2);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.message-line {
+    margin: 0.8rem 0;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.message-line:nth-child(1) { animation-delay: 0.2s; }
+.message-line:nth-child(2) { animation-delay: 0.3s; }
+.message-line:nth-child(3) { animation-delay: 0.4s; }
+.message-line:nth-child(4) { animation-delay: 0.5s; }
+.message-line:nth-child(5) { animation-delay: 0.6s; }
+
+.modal-button {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--line);
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.modal-button:hover {
+    border-color: var(--alt);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

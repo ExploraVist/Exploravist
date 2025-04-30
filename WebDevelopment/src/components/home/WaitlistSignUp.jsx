@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import '../../styles/home/WaitlistSignUp.css';
+import Modal from '../Modal';
 
 const API_ENDPOINT = 'https://mesvi31h6k.execute-api.us-west-2.amazonaws.com/signup';
 
 const WaitlistSignup = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
+  const [modalState, setModalState] = useState({
+    isOpen: false
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,16 +25,20 @@ const WaitlistSignup = () => {
       });
 
       if (res.ok) {
-        alert("Thank you for joining! We'll reach out shortly with updates.");
+        setModalState(prev => ({ ...prev, isOpen: true }));
         setEmail('');
       } else {
-        alert('Something went wrong. Please try again.');
+        alert("Sorry, something went wrong. Please contact exploravist@exploravist.net to get this fixed.");
       }
     } catch (err) {
-      alert('Something went wrong. Please try again.');
+      alert("Sorry, something went wrong. Please contact exploravist@exploravist.net to get this fixed.");
     } finally {
       setStatus('');
     }
+  };
+
+  const closeModal = () => {
+    setModalState(prev => ({ ...prev, isOpen: false }));
   };
 
   return (
@@ -62,6 +70,10 @@ const WaitlistSignup = () => {
           </div>
         </form>
       </div>
+      <Modal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+      />
     </section>
   );
 };
