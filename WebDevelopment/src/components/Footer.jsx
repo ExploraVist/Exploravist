@@ -20,9 +20,9 @@ const Footer = () => {
       <div className="footer-content">
         {/* Left Column - Mission */}
         <div className="footer-column" role="region" aria-label="Mission Statement">
-          <h2 className="footer-heading" tabIndex="0">ExploraVist</h2>
+          <h2 className="footer-heading" tabIndex="0"><Link to='/' className='footer-heading-link'>ExploraVist</Link></h2>
           <p className="footer-mission" tabIndex="0">
-            Empowering the blind and visually impaired with affordable, AI-powered assistive tech.
+            Empowering the visually impaired with affordable, AI-powered assistive tech.
           </p>
           <div className="footer-spark" role="presentation" aria-hidden="true">
             <div className="spark-dot"></div>
@@ -31,7 +31,7 @@ const Footer = () => {
 
         {/* Middle Column - Quick Links */}
         <div className="footer-column" role="region" aria-label="Quick Links">
-          <h3 className="footer-subheading">Quick Links</h3>
+          {/* <h3 className="footer-subheading">Quick Links</h3>
           <nav className="footer-nav" role="navigation" aria-label="Footer Navigation">
             <ul className="footer-links">
               <li><Link to="/" className="footer-link" tabIndex="0">Home</Link></li>
@@ -39,7 +39,7 @@ const Footer = () => {
               <li><Link to="/updates" className="footer-link" tabIndex="0">Updates</Link></li>
               <li><Link to="/contact" className="footer-link" tabIndex="0">Get Involved</Link></li>
             </ul>
-          </nav>
+          </nav> */}
         </div>
 
         {/* Right Column - Socials */}

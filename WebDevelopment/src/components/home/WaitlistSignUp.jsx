@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 import '../../styles/home/WaitlistSignUp.css';
 import Modal from '../Modal';
 
@@ -65,7 +66,7 @@ const WaitlistSignup = () => {
               disabled={status === 'submitting' || !email}
               aria-label="Join waitlist"
             >
-              {status === 'submitting' ? 'Joining...' : 'Join →'}
+              {status === 'submitting' ? 'Joining...' : <>Join <ArrowRight size={20} /></>}
             </button>
           </div>
         </form>

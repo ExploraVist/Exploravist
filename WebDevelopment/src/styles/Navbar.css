@@ -1,75 +1,149 @@
-.navbar {
-    height: var(--nav-size);
-    position: sticky; 
+.navbar_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
     top: 0;
-    z-index: 500; 
-    transition: background-color 250ms ease-in-out;
+    z-index: 500;
+}
+
+.navbar {
+    width: 90vw;
+    height: var(--nav-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+    border-radius: 12px;
     background: var(--bg);
+    margin: auto 0;
+    transition: all 0.4s ease-in-out;
+    position: relative;
 }
 
 .navbar.sticky {
-    background-color: transparent;
+    width: 80vw;
+    border: 1px solid var(--line);
+    background-color: var(--bg);
+    box-shadow: 0 4px 15px rgba(190, 190, 190, 0.1);
 }
 
 .navbar_title {
-    display: block;
-    float: left;
-    margin-top: auto;
-    transition: ease-in-out 250ms;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
 }
 
 .nav_logo {
-    height: calc(var(--nav-size)*(2/3));
-    margin-top: calc(var(--nav-size)*(1/6));
-    margin-bottom: calc(var(--nav-size)*(1/6));
-    margin-left: 6vw;
+    height: calc(var(--nav-size)*(9/10));
 }
 
-.nav_links {
-    margin-right: 4vw;
+.nav_links_center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_links_right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
 }
 
 .nav_link {
     font-size: 1.1rem;
-    color: var(--bg);
-    background-color: var(--text);
-    display: block;
-    float: right;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-top: calc(7.5vh - 1.2rem);
-    padding: .6rem 1.2rem .6rem 1.2rem;
-    border: 3px var(--line) solid;
-    border-radius: 15px;
-    transition: ease-in-out 250ms;
+    color: var(--text-3);
+    text-decoration: none;
+    margin: 0 1.5rem;
+    transition: color 0.4s ease-in-out;
+    transition: filter 0.4s ease-in-out;
 }
 
 .nav_link:hover {
-    filter: opacity(75%);
+    color: var(--text);
+    filter: brightness(3);
+}
+
+.nav_link_icon {
+    color: var(--text-2);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav_link_icon:hover {
+    filter:brightness(2);
+    border-color: var(--text-2);
+}
+
+.mobile_menu_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    color: var(--text-2);
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.mobile_menu_button:hover {
+    color: var(--text);
 }
 
 @media only screen and (max-width: 850px) {
-    .nav_logo {
-        height: calc(var(--nav-size)*(1/2));
-        margin-top: calc(var(--nav-size)*(1/4));
-        margin-bottom: calc(var(--nav-size)*(1/4));
-        margin-left: 0;
-        margin-right: 0;
+    .navbar_container {
+        padding: 0.5rem;
     }
 
-    .nav_link {
-        align-items: center;
+    .navbar {
+        padding: 0 .5rem;
+        width: 90vw;
+    }
+
+    .nav_logo {
+        height: calc(var(--nav-size)*(7/10));
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        position: static;
+    }
+
+    .navbar_title {
+        position: static;
+    }
+
+    .nav_links_center {
+        width: auto;
+        flex: 1;
+    }
+
+    .nav_links_right {
+        position: static;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+}
 
 .nav_mobile_menu_dropdown {
     position: fixed;
     top: 0;
     left: 0;
-    width:100vw;
+    width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background-color: var(--bg);
     z-index: 999;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -82,46 +156,33 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background-color: var(--bg);
 }
 
-.nav_mobile_menu_spacer{
+.nav_mobile_menu_header {
     display: flex;
-    justify-content: end;
-    height: 15vh;
+    justify-content: flex-end;
+    padding: 1rem;
 }
 
-.nav_mobile_menu_x_btn {
-    color: var(--bg);
-    background-color: var(--bg-accent);
-    float: right;
-    margin-right: 2rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: .2rem .4rem .2rem .4rem;
-    border: 3px var(--bg-accent-two) solid;
-    border-radius: 15px;
-    transition: ease-in-out 250ms;
-    /* backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px); */
-}
-
-.nav_mobile_menu_x_btn:hover {
-    filter: opacity(75%);
+.nav_mobile_menu_close {
+    background: none;
+    border: none;
+    color: var(--text-2);
     cursor: pointer;
+    padding-right: 2rem;
 }
 
-.square {
-    fill: var(--bg-accent);
-    stroke: var(--bg);
+.nav_mobile_menu_close:hover {
+    color: var(--text);
 }
 
 .nav_mobile_menu_links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 85vh;
-    background-color: var(--bg);
+    height: 100%;
+    padding-top: 2rem;
     text-align: center;
 }
 
@@ -140,14 +201,17 @@
     color: var(--text-2);
     font-size: 1.4rem;
     margin-bottom: 1.2rem;
-    z-index: 1000
+    z-index: 1000;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav_mobile_menu_link:hover {
+    color: var(--text);
 }
 
 .nav_mobile_menu_active_link {
     color: var(--text-3);
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    filter: brightness(70%);
 }
 
 .nav_mobile_menu_svg {
@@ -159,16 +223,16 @@
 }
 
 .skip-link {
-  position: absolute;
-  top: -60px;
-  left: 0;
-  background: var(--text);
-  color: var(--bg);
-  padding: 8px;
-  z-index: 100;
-  text-decoration: none;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background: var(--text);
+    color: var(--bg);
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
 }
 
 .skip-link:focus {
-  top: 0;
+    top: 0;
 }

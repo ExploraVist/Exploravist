@@ -58,6 +58,9 @@
     font-weight: 500;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .input-group button:hover {

@@ -185,7 +185,7 @@
 
     .glass_background {
         padding: 2rem;
-        width: 80vw;
+        width: 75vw;
         margin: 0 auto;
     }
 
@@ -215,7 +215,7 @@
 
 @media only screen and (max-width: 550px) {
     .glass_background {
-        width: 85vw;
+        width: 80vw;
         padding: 1.5rem;
     }
 
