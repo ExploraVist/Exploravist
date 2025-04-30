@@ -1,11 +1,17 @@
 .updates_hero {
     min-height: 100vh;
     width: 100%;
-    padding-top: 5rem;
+    padding-top: calc(var(--nav-size) + 7.5rem);
     padding-bottom: 10rem;
     background-color: var(--bg);
     position: relative;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+    .updates_hero {
+        padding-top: 2.5rem;
+    }
 }
 
 .updates_hero_wrapper {

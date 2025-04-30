@@ -4,11 +4,17 @@
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 7.5rem;
+    padding-top: calc(var(--nav-size) + 7.5rem);
     padding-bottom: 10rem;
     background-color: var(--bg);
     position: relative;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+    .about_hero {
+        padding-top: 2.5rem;
+    }
 }
 
 .about_hero_wrapper {

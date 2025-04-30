@@ -4,12 +4,18 @@
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 7.5rem;
+    padding-top: calc(var(--nav-size) + 7.5rem);
     padding-bottom: 10rem;
     background-color: var(--bg);
     position: relative;
     overflow: hidden;
     color: var(--text);
+}
+
+@media only screen and (max-width: 850px) {
+    .contact {
+        padding-top: 2.5rem;
+    }
 }
 
 .contact_hero {
@@ -36,7 +42,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     border: 2px var(--line) solid;
     background-color: var(-text);
     width: fit-content;
