@@ -94,7 +94,7 @@ const Footer = () => {
               tabIndex="0"
               onClick={handleCopyEmail}
             >
-              exploravist@exploravist.com
+              exploravist@exploravist.net
             </p>
           </div>
         </div>
