@@ -12,7 +12,7 @@
     padding: 1rem;
     border-radius: 15px;
     transition: ease-in-out 250ms;
-    margin-top: 2rem;
+    margin-top: calc(var(--nav-size) + 5rem);;
 }
 
 .update-page {
