@@ -27,7 +27,7 @@ const Product = () => {
         <div className="device-content">
           <div className="device-text">
             <blockquote tabIndex="0" aria-label="Quote from CTO">
-              <p>"Linear increases in ease of use lead to exponential increases in usability."</p>
+              <p>"Linear increases in convenience lead to exponential increases in independence."</p>
               <footer>
                 <cite>– Dominick Quaye, CTO</cite>
               </footer>
