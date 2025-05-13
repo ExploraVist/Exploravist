@@ -45,8 +45,8 @@ const WaitlistSignup = () => {
   return (
     <section className="waitlist-section" role="region" aria-label="Join Waitlist">
       <div className="waitlist-container">
-        <h2 className="waitlist-title" tabIndex="0">Join the Waitlist</h2>
-        <p className="waitlist-description" tabIndex="0">
+        <h2 className="waitlist-title">Join the Waitlist</h2>
+        <p className="waitlist-description">
           Be the first to know when our device becomes available and receive updates about our progress.
         </p>
 
@@ -66,7 +66,7 @@ const WaitlistSignup = () => {
               disabled={status === 'submitting' || !email}
               aria-label="Join waitlist"
             >
-              {status === 'submitting' ? 'Joining...' : <>Join <ArrowRight size={20} /></>}
+              {status === 'submitting' ? 'Joining...' : <>Join <ArrowRight size={20} aria-hidden="true" /></>}
             </button>
           </div>
         </form>

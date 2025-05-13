@@ -71,11 +71,11 @@ const HomeHero = () => {
           <div className='grid_fade'></div>
         </div>
         <div className='glass_background' ref={glassRef}>
-          <h1 className='home_text_title' tabIndex="0">
+          <h1 className='home_text_title'>
             See Your World,<br />
             <span>Differently.</span>
           </h1>
-          <p className='home_text_desc' tabIndex="0">
+          <p className='home_text_desc'>
             A wearable device and mobile app empowering visually impaired users through affordable, AI-powered image understanding.
           </p>
         </div>

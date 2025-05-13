@@ -16,9 +16,11 @@ const UpdatesPage = () => {
     return (
       <Fragment>
         <Navbar />
-        <div className="update-page">
-          <p>Update not found. Please check the URL and ensure it matches your update data.</p>
-        </div>
+        <main id="main-content" tabIndex="-1">
+          <div className="update-page">
+            <p>Update not found. Please check the URL and ensure it matches your update data.</p>
+          </div>
+        </main>
         <Footer />
       </Fragment>
     );
@@ -65,19 +67,21 @@ const UpdatesPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="update-back-section">
-        <span className="update-spacer" aria-hidden="true" />
-        <Link className="update-back-button" to="/updates" aria-label='Back to Updates'><CornerUpLeft size={24} /></Link>
-      </div>
-      <div className="update-page">
-        <div className="update-header">
-          <h1 tabIndex="0">{update.title}</h1>
-          <p className="update-date" tabIndex="0">Posted on {update.date}</p>
+      <main id="main-content" tabIndex="-1">
+        <div className="update-back-section">
+          <span className="update-spacer" aria-hidden="true" />
+          <Link className="update-back-button" to="/updates" aria-label='Back to Updates'><CornerUpLeft size={24} /></Link>
         </div>
-        <div className="update-content" tabIndex="0">
-          {update.sections.map((section, idx) => renderSection(section, idx))}
+        <div className="update-page">
+          <div className="update-header">
+            <h1 tabIndex="0">{update.title}</h1>
+            <p className="update-date" tabIndex="0">Posted on {update.date}</p>
+          </div>
+          <div className="update-content" tabIndex="0">
+            {update.sections.map((section, idx) => renderSection(section, idx))}
+          </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

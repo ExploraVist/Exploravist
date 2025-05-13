@@ -6,7 +6,6 @@ const FeatureCard = ({ icon: Icon, title, description }) => {
     <div 
       className="feature-card" 
       role="listitem" 
-      tabIndex="0"
       aria-label={`${title}: ${description}`}
     >
       <Icon size={32} aria-hidden="true" className="feature-icon" />

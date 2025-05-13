@@ -29,8 +29,8 @@ const FounderCard = ({ name, role, linkedIn, audioClip, image }) => {
       </div>
       
       <div className="founder_content">
-        <h3 className="founder_name" tabIndex="0">{name}</h3>
-        <p className="founder_role" tabIndex="0">{role}</p>
+        <h3 className="founder_name">{name}</h3>
+        <p className="founder_role">{role}</p>
         
         <div className="founder_actions">
           <button 

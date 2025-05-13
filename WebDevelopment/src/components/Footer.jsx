@@ -20,8 +20,8 @@ const Footer = () => {
       <div className="footer-content">
         {/* Left Column - Mission */}
         <div className="footer-column" role="region" aria-label="Mission Statement">
-          <h2 className="footer-heading" tabIndex="0"><Link to='/' className='footer-heading-link'>ExploraVist</Link></h2>
-          <p className="footer-mission" tabIndex="0">
+          <h2 className="footer-heading"><Link to='/' className='footer-heading-link'>ExploraVist</Link></h2>
+          <p className="footer-mission">
             Empowering the visually impaired with affordable, AI-powered assistive tech.
           </p>
           <div className="footer-spark" role="presentation" aria-hidden="true">
@@ -34,10 +34,10 @@ const Footer = () => {
           {/* <h3 className="footer-subheading">Quick Links</h3>
           <nav className="footer-nav" role="navigation" aria-label="Footer Navigation">
             <ul className="footer-links">
-              <li><Link to="/" className="footer-link" tabIndex="0">Home</Link></li>
-              <li><Link to="/about" className="footer-link" tabIndex="0">About</Link></li>
-              <li><Link to="/updates" className="footer-link" tabIndex="0">Updates</Link></li>
-              <li><Link to="/contact" className="footer-link" tabIndex="0">Get Involved</Link></li>
+              <li><Link to="/" className="footer-link">Home</Link></li>
+              <li><Link to="/about" className="footer-link">About</Link></li>
+              <li><Link to="/updates" className="footer-link">Updates</Link></li>
+              <li><Link to="/contact" className="footer-link">Get Involved</Link></li>
             </ul>
           </nav> */}
         </div>
@@ -51,51 +51,47 @@ const Footer = () => {
               className="social-link" 
               target="_blank" 
               rel="noopener noreferrer"
-              tabIndex="0"
               aria-label="Follow us on Instagram"
             >
-              <Instagram size={24} />
+              <Instagram size={24} aria-hidden="true" />
             </a>
             <a 
               href="https://x.com/ExploraVist_Inc" 
               className="social-link" 
               target="_blank" 
               rel="noopener noreferrer"
-              tabIndex="0"
               aria-label="Visit our X"
             >
-              <Twitter size={24} />
+              <Twitter size={24} aria-hidden="true" />
             </a>
             <a 
               href="https://www.linkedin.com/company/exploravist" 
               className="social-link" 
               target="_blank" 
               rel="noopener noreferrer"
-              tabIndex="0"
               aria-label="Follow us on LinkedIn"
             >
-              <Linkedin size={24} />
+              <Linkedin size={24} aria-hidden="true" />
             </a>
             <a 
               href="https://github.com/exploravist" 
               className="social-link" 
               target="_blank" 
               rel="noopener noreferrer"
-              tabIndex="0"
               aria-label="Visit our GitHub"
             >
-              <Github size={24} />
+              <Github size={24} aria-hidden="true" />
             </a>
           </div>
           <div className="footer-email">
-            <Mail size={16} />
-            <p
+            <Mail size={16} aria-hidden="true" />
+            <button
               className="email-link"
-              tabIndex="0"
               onClick={handleCopyEmail}
+              aria-label="Copy email address to clipboard"
             >
               exploravist@exploravist.net
-            </p>
+            </button>
           </div>
         </div>
       </div>

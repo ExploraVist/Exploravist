@@ -10,7 +10,7 @@ const Partnerships = () => {
       <div className="partnerships-content">
         <h2 className="partnerships-heading">Our Partners</h2>
         <div className="partners-grid">
-          <div className="partner-item" tabIndex="0">
+          <div className="partner-item">
             <div className="partner-logo-container">
               <img 
                 src={hiveLogo} 
@@ -21,7 +21,7 @@ const Partnerships = () => {
             <p className="partner-name">The Hive</p>
           </div>
           
-          <div className="partner-item" tabIndex="0">
+          <div className="partner-item">
             <div className="partner-logo-container">
               <img 
                 src={muddLogo} 
@@ -32,7 +32,7 @@ const Partnerships = () => {
             <p className="partner-name">HMC Clinic</p>
           </div>
           
-          <div className="partner-item" tabIndex="0">
+          <div className="partner-item">
             <div className="partner-logo-container">
               <img 
                 src={lighthouseLogo} 

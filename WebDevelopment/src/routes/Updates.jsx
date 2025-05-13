@@ -9,7 +9,9 @@ const Updates = () => {
   return (
     <Fragment>
       <Navbar/>
-      <UpdatesHero/>
+      <main id="main-content" tabIndex="-1">
+        <UpdatesHero/>
+      </main>
       <Footer/>
     </Fragment>
   );

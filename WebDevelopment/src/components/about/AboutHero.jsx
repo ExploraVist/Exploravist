@@ -27,13 +27,13 @@ const AboutHero = () => {
           <div className="about_hero_mission_statement" role="region" aria-label="Mission Statement">
             <span className="about_hero_label">Our Mission</span>
             <div className="about_hero_statements">
-              <p className="about_statement" tabIndex="0">
+              <p className="about_statement">
                 <span className="statement_highlight">Empowering</span> the blind and visually impaired
               </p>
-              <p className="about_statement" tabIndex="0">
+              <p className="about_statement">
                 through <span className="statement_highlight">intuitive, affordable</span> technology
               </p>
-              <p className="about_statement" tabIndex="0">
+              <p className="about_statement">
                 that sparks <span className="statement_highlight">curiosity</span> and fosters <span className="statement_highlight">connection</span>
               </p>
             </div>
@@ -42,27 +42,27 @@ const AboutHero = () => {
           {/* Inspiration Section */}
           <div className="about_hero_mission" role="region" aria-label="Our Journey">
             <span className="about_hero_label">The Journey</span>
-            <h2 className="about_mission_title" tabIndex="0">
+            <h2 className="about_mission_title">
               What inspired our mission?
             </h2>
             <div className="about_mission_content">
               <div className="about_mission_section" role="article">
-                <h3 className="about_mission_subtitle" tabIndex="0">The Market Gap</h3>
-                <p className="about_mission_text" tabIndex="0">
+                <h3 className="about_mission_subtitle">The Market Gap</h3>
+                <p className="about_mission_text">
                   When we looked into the market for wearable accessibility technology, we noticed a clear gap. Companies like Envision and OrCam offer wearables starting at $2,000, creating a significant barrier for many.
                 </p>
               </div>
               
               <div className="about_mission_section" role="article">
-                <h3 className="about_mission_subtitle" tabIndex="0">The Reality</h3>
-                <p className="about_mission_text" tabIndex="0">
+                <h3 className="about_mission_subtitle">The Reality</h3>
+                <p className="about_mission_text">
                   The visually impaired community often faces significant financial disadvantages. Community feedback consistently tells us that existing solutions are too expensive for what they offer.
                 </p>
               </div>
               
               <div className="about_mission_section" role="article">
-                <h3 className="about_mission_subtitle" tabIndex="0">Our Response</h3>
-                <p className="about_mission_text" tabIndex="0">
+                <h3 className="about_mission_subtitle">Our Response</h3>
+                <p className="about_mission_text">
                   This revealed a clear need for more affordable and accessible devices. So began our journey to create technology truly built for the majority of the VI community.
                 </p>
               </div>
@@ -71,7 +71,7 @@ const AboutHero = () => {
 
           {/* Origin Story Section */}
           <div className="about_hero_origin" role="region" aria-label="Our Origin Story">
-            <h2 className="about_origin_title" tabIndex="0">
+            <h2 className="about_origin_title">
               How did ExploraVist start?
             </h2>
             <div className="audio_player" role="region" aria-label="Origin Story Audio Player">
@@ -79,7 +79,6 @@ const AboutHero = () => {
                 className="audio_button" 
                 onClick={toggleAudio}
                 aria-label={isPlaying ? "Pause origin story" : "Play origin story"}
-                tabIndex="0"
               >
                 {isPlaying ? (
                   <Pause className="audio_icon" aria-hidden="true" />

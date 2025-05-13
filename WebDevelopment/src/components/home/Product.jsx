@@ -26,25 +26,25 @@ const Product = () => {
       <div className="device-section" role="region" aria-label="Device Overview">
         <div className="device-content">
           <div className="device-text">
-            <blockquote tabIndex="0" aria-label="Quote from CTO">
+            <blockquote aria-label="Quote from CTO">
               <p>"Linear increases in convenience lead to exponential increases in independence."</p>
               <footer>
                 <cite>– Dominick Quaye, CTO</cite>
               </footer>
             </blockquote>
             <div className="device-features">
-              <h2 tabIndex="0">Attach to any pair of glasses</h2>
-              <p tabIndex="0">We're simple: Just a camera, a speaker, and a microphone.</p>
+              <h2>Attach to any pair of glasses</h2>
+              <p>We're simple: Just a camera, a speaker, and a microphone.</p>
               <div className="feature-grid" role="list" aria-label="Core Device Features">
-                <div className="feature-item" role="listitem" tabIndex="0">
+                <div className="feature-item" role="listitem">
                   <Camera size={24} aria-hidden="true" />
                   <span>Capture moments</span>
                 </div>
-                <div className="feature-item" role="listitem" tabIndex="0">
+                <div className="feature-item" role="listitem">
                   <Pencil size={24} aria-hidden="true" />
                   <span>Take notes</span>
                 </div>
-                <div className="feature-item" role="listitem" tabIndex="0">
+                <div className="feature-item" role="listitem">
                   <Share size={24} aria-hidden="true" />
                   <span>Share with friends</span>
                 </div>
@@ -55,8 +55,7 @@ const Product = () => {
             <img 
               src={deviceImage} 
               alt="ExploraVist Device attached to glasses showing the camera, speaker, and microphone components" 
-              className="device-img" 
-              tabIndex="0"
+              className="device-img"
             />
           </div>
         </div>
@@ -66,23 +65,23 @@ const Product = () => {
       <div className="app-section" role="region" aria-label="App Features">
         <div className="app-header">
           <Bluetooth className="bluetooth-icon" size={48} aria-hidden="true" />
-          <h2 className="app-pair" tabIndex="0">Pair your ExploraVist device with the App</h2>
-          <p tabIndex="0">We believe in simple, minimalist design, built with ease of use in mind.</p>
+          <h2 className="app-pair">Pair your ExploraVist device with the App</h2>
+          <p>We believe in simple, minimalist design, built with ease of use in mind.</p>
           
           <div className="app-showcase" role="region" aria-label="App Interface Previews">
-            <div className="app-screenshot" tabIndex="0" role="img" aria-label="Capture Interface">
+            <div className="app-screenshot" role="img" aria-label="Capture Interface">
               <img 
                 src={captureUI} 
                 alt="Capture Interface showing camera view with capture button and settings options" 
               />
             </div>
-            <div className="app-screenshot" tabIndex="0" role="img" aria-label="Settings Interface">
+            <div className="app-screenshot" role="img" aria-label="Settings Interface">
               <img 
                 src={editUI} 
                 alt="Capture Interface showing an image with a specific question and its response" 
               />
             </div>
-            <div className="app-screenshot" tabIndex="0" role="img" aria-label="Gallery Interface">
+            <div className="app-screenshot" role="img" aria-label="Gallery Interface">
               <img 
                 src={galleryUI} 
                 alt="Gallery Interface displaying captured images in a grid layout" 

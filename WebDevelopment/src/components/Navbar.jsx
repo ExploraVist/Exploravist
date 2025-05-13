@@ -1,7 +1,8 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import { Menu, X, Mailbox } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { createPortal } from 'react-dom';
 import NavLogo from '../assets/nav-logo.svg'
 import '../styles/Navbar.css';
 
@@ -11,17 +12,18 @@ const Navbar = () => {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const menuRef = useRef(null);
+  const firstMenuItemRef = useRef(null);
 
   const handleResize = () => {
     if (window.innerWidth <= 850) {
       setMobileMenu(true);
-      setMobileMenuVisible(false);
-      // Always show navbar on mobile
-      setIsVisible(true);
     } else {
       setMobileMenu(false);
-      setMobileMenuVisible(false);
+      setMobileMenuVisible(false); // Close menu when resizing to desktop
     }
+    // Always show navbar on mobile
+    setIsVisible(true);
   };
 
   const handleScroll = () => {
@@ -43,6 +45,20 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuVisible(!isMobileMenuVisible);
+    // Toggle body scroll lock
+    document.body.style.overflow = !isMobileMenuVisible ? 'hidden' : '';
+  };
+
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      toggleMobileMenu();
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      toggleMobileMenu();
+    }
   };
 
   useEffect(() => {
@@ -50,17 +66,98 @@ const Navbar = () => {
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+      // Ensure scroll is re-enabled when component unmounts
+      document.body.style.overflow = '';
     };
   }, [lastScrollY, isMobileMenu]);
 
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (isMobileMenuVisible && firstMenuItemRef.current) {
+      firstMenuItemRef.current.focus();
+    }
+  }, [isMobileMenuVisible]);
+
+  const MobileMenu = () => {
+    if (!isMobileMenuVisible) return null;
+
+    return createPortal(
+      <div 
+        className="mobile-menu-backdrop"
+        onClick={handleBackdropClick}
+        role="presentation"
+      >
+        <motion.div
+          className='nav_mobile_menu_dropdown'
+          initial={{ x: '100%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100%' }}
+          transition={{ duration: 0.3 }}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+        >
+          <div className='nav_mobile_menu'>
+            <div className='nav_mobile_menu_header'>
+              <button 
+                className='nav_mobile_menu_close' 
+                onClick={toggleMobileMenu}
+                aria-label="Close menu"
+              >
+                <X size={40} />
+              </button>
+            </div>
+            <nav className='nav_mobile_menu_links' role="navigation">
+              <p className='nav_mobile_menu_title'>Menu</p>
+              <Link 
+                to='/' 
+                className={`nav_mobile_menu_link ${window.location.pathname === '/' ? 'nav_mobile_menu_active_link' : ''}`}
+                ref={firstMenuItemRef}
+                tabIndex={0}
+              >
+                Home
+              </Link>
+              <Link 
+                to='/about' 
+                className={`nav_mobile_menu_link ${window.location.pathname === '/about' ? 'nav_mobile_menu_active_link' : ''}`}
+                tabIndex={0}
+              >
+                About
+              </Link>
+              <Link 
+                to='/updates' 
+                className={`nav_mobile_menu_link ${window.location.pathname === '/updates' ? 'nav_mobile_menu_active_link' : ''}`}
+                tabIndex={0}
+              >
+                Updates
+              </Link>
+              <Link 
+                to='/contact' 
+                className={`nav_mobile_menu_link ${window.location.pathname === '/contact' ? 'nav_mobile_menu_active_link' : ''}`}
+                tabIndex={0}
+              >
+                Get Involved
+              </Link>
+              <div className='nav_mobile_menu_svg' />
+            </nav>
+          </div>
+        </motion.div>
+      </div>,
+      document.body
+    );
+  };
+
   return (
     <Fragment>
-      <a href="#main-content" className="skip-link">Skip to main content</a>
       <div className={`navbar_container ${isVisible ? 'visible' : 'hidden'}`}>
-        <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <nav className={`navbar ${isSticky ? 'sticky' : ''}`} role="navigation" aria-label="Main navigation">
           <Link to='/' className='navbar_title'>
             <img 
               className='nav_logo' 
@@ -86,34 +183,17 @@ const Navbar = () => {
             }
             {isMobileMenu &&
               <div>
-                <button className='nav_link mobile_menu_button' onClick={toggleMobileMenu}>
+                <button 
+                  className='nav_link mobile_menu_button' 
+                  onClick={toggleMobileMenu}
+                  aria-expanded={isMobileMenuVisible}
+                  aria-label="Open menu"
+                >
                   <Menu size={26}/>
                 </button>
-                {isMobileMenuVisible &&
-                <motion.div
-                  className='nav_mobile_menu_dropdown'
-                  initial={{ x: '100%' }}
-                  animate={{ x: 0 }}
-                  exit={{ x: '100%' }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div className='nav_mobile_menu'>
-                    <div className='nav_mobile_menu_header'>
-                      <button className='nav_mobile_menu_close' onClick={toggleMobileMenu}>
-                        <X size={40} />
-                      </button>
-                    </div>
-                    <div className='nav_mobile_menu_links'>
-                      <p className='nav_mobile_menu_title'>Menu</p>
-                      <Link to='/' className={`nav_mobile_menu_link ${window.location.pathname === '/' ? 'nav_mobile_menu_active_link' : ''}`}>Home</Link>
-                      <Link to='/about' className={`nav_mobile_menu_link ${window.location.pathname === '/about' ? 'nav_mobile_menu_active_link' : ''}`}>About</Link>
-                      <Link to='/updates' className={`nav_mobile_menu_link ${window.location.pathname === '/updates' ? 'nav_mobile_menu_active_link' : ''}`}>Updates</Link>
-                      <Link to='/contact' className={`nav_mobile_menu_link ${window.location.pathname === '/contact' ? 'nav_mobile_menu_active_link' : ''}`}>Get Involved</Link>
-                      <div className='nav_mobile_menu_svg' />
-                    </div>
-                  </div>
-                </motion.div>
-                }
+                <AnimatePresence>
+                  <MobileMenu />
+                </AnimatePresence>
               </div>
             }
           </div>
