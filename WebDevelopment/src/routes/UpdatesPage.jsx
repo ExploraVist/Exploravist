@@ -68,12 +68,14 @@ const UpdatesPage = () => {
     <div>
       <Navbar />
       <main id="main-content" tabIndex="-1">
-        <div className="update-back-section">
-          <span className="update-spacer" aria-hidden="true" />
-          <Link className="update-back-button" to="/updates" aria-label='Back to Updates'><CornerUpLeft size={24} /></Link>
-        </div>
         <div className="update-page">
           <div className="update-header">
+            <div className="update-header-top">
+              <Link className="update-back-link" to="/updates" aria-label='Back to Updates'>
+                <CornerUpLeft size={20} />
+                <span>Back to Updates</span>
+              </Link>
+            </div>
             <h1 tabIndex="0">{update.title}</h1>
             <p className="update-date" tabIndex="0">Posted on {update.date}</p>
           </div>

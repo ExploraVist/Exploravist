@@ -1,20 +1,4 @@
 /* Outer container for the update page */
-.update-back-section {
-    justify-content: center;
-    height: 5vh;
-}
-
-.update-back-button {
-    font-size: 1.1rem;
-    color: var(--text-3);
-    position: absolute ;
-    left: 5%;
-    padding: 1rem;
-    border-radius: 15px;
-    transition: ease-in-out 250ms;
-    margin-top: calc(var(--nav-size) + 5rem);;
-}
-
 .update-page {
     max-width: 800px;
     margin: 0 auto;
@@ -25,6 +9,7 @@
     color: var(--text);
     font-family: sans-serif;
     line-height: 1.6;
+    margin-top: calc(var(--nav-size) + 5rem);;
 }
 
 /* Header for the update (title and date) */
@@ -73,7 +58,7 @@
 
 /* Links */
 .update-page a {
-    color: var(--alt);
+    color: var(--text);
     text-decoration: underline;
 }
 
@@ -85,4 +70,30 @@
     margin: 1rem 0;
     border: 4px solid var(--text);
     border-radius: 6px;
+}
+
+.update-header-top {
+  margin-bottom: 1.5rem;
+}
+
+.update-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.update-back-link:hover {
+  opacity: 0.7;
+}
+
+.update-back-link svg {
+  stroke: var(--text);
+}
+
+.update-back-link span {
+    color: var(--text);
 }
