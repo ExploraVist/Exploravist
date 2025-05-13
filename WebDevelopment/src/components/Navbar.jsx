@@ -18,12 +18,11 @@ const Navbar = () => {
   const handleResize = () => {
     if (window.innerWidth <= 850) {
       setMobileMenu(true);
+      setIsVisible(true);
     } else {
       setMobileMenu(false);
       setMobileMenuVisible(false); // Close menu when resizing to desktop
     }
-    // Always show navbar on mobile
-    setIsVisible(true);
   };
 
   const handleScroll = () => {
@@ -32,9 +31,17 @@ const Navbar = () => {
     
     // Only apply disappearing behavior on desktop
     if (!isMobileMenu) {
-      if (currentScrollY > lastScrollY && currentScrollY > threshold) {
-        setIsVisible(false);
+      // Check if we've scrolled past the threshold
+      if (currentScrollY > threshold) {
+        // If scrolling down and past threshold, hide navbar
+        if (currentScrollY > lastScrollY) {
+          setIsVisible(false);
+        } else {
+          // If scrolling up, show navbar
+          setIsVisible(true);
+        }
       } else {
+        // Always show navbar when near the top
         setIsVisible(true);
       }
     }
