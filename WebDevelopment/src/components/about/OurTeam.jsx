@@ -20,7 +20,7 @@ const OurTeam = () => {
     },
     {
       name: "Dominick Quaye",
-      role: "Co-CTO",
+      role: "CHO",
       linkedIn: "https://www.linkedin.com/in/dominick-q-907baa210/",
       audioClip: domIntro,
       image: domImage
@@ -34,7 +34,7 @@ const OurTeam = () => {
     },
     {
       name: "Bilal Abraham",
-      role: "Co-CTO",
+      role: "CSO",
       linkedIn: "https://www.linkedin.com/in/bilal-abraham/",
       audioClip: bilalIntro,
       image: bilalImage
@@ -70,28 +70,64 @@ const OurTeam = () => {
           <section className="team_members">
             <h3 className="section_title">Team Members</h3>
             <ul className="team_list">
-              <li>Nithya Yeluri - Embedded</li>
-              <li>Max Conine - Embedded</li>
-              <li>Nico Villalba - App Development</li>
-              <li>Ruixi Xiang - Marketing Intern</li>
-              <li>Alex Chacon - Marketing Intern</li>
+              <li className="team_member">
+                <div className="member_name">Nithya Yeluri</div>
+                <div className="member_role">Embedded</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Max Conine</div>
+                <div className="member_role">Embedded</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Nico Villalba</div>
+                <div className="member_role">App Development</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Ruixi Xiang</div>
+                <div className="member_role">Marketing Intern</div>
+              </li>
+              {/* <li className="team_member">
+                <div className="member_name">Alex Chacon</div>
+                <div className="member_role">Marketing Intern</div>
+              </li> */}
             </ul>
           </section>
 
           {/* Research & Development Clinic Team Section */}
           <section className="rd_team">
-            <h3 className="section_title">Research &amp; Development Clinic Team</h3>
+            <h3 className="section_title">Research &amp; Development Clinic</h3>
             <p className="section_description">
               Clinic - Our Partnership with The Hive / HMC Clinic provided us with invaluable findings through a year long program of R&amp;D. Every decision throughout this program was made with a human-centered approach, with regular interview sessions at the lighthouse for the blind.
             </p>
             <ul className="team_list">
-              <li>Katie Baakkonen</li>
-              <li>Taylor Levinson</li>
-              <li>Daniel Fajardo</li>
-              <li>Massin Ihs</li>
-              <li>Ket Hollingsworth</li>
-              <li>Dominick Quaye</li>
-              <li>Mauricio Bravo</li>
+              <li className="team_member">
+                <div className="member_name">Katie Baakkonen</div>
+                <div className="member_role">Engineer</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Taylor Levinson</div>
+                <div className="member_role">Computer Science</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Daniel Fajardo</div>
+                <div className="member_role">Engineer</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Massin Ihs</div>
+                <div className="member_role">Engineer</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Ket Hollingsworth</div>
+                <div className="member_role">Computer Science</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Dominick Quaye</div>
+                <div className="member_role">Engineer</div>
+              </li>
+              <li className="team_member">
+                <div className="member_name">Mauricio Bravo</div>
+                <div className="member_role">Engineer</div>
+              </li>
             </ul>
           </section>
 
@@ -102,15 +138,27 @@ const OurTeam = () => {
               <div className="technical_advisors">
                 <h4 className="subsection_title">Technical</h4>
                 <ul className="team_list">
-                  <li>Aashita Kesarwani</li>
-                  <li>Tristan Huang</li>
+                  <li className="team_member">
+                    <div className="member_name">Aashita Kesarwani</div>
+                    <div className="member_role">Data Science Specialist</div>
+                  </li>
+                  <li className="team_member">
+                    <div className="member_name">Tristan Huang</div>
+                    <div className="member_role">Hardware Advisor</div>
+                  </li>
                 </ul>
               </div>
               <div className="vision_advisors">
                 <h4 className="subsection_title">Vision &amp; Community</h4>
                 <ul className="team_list">
-                  <li>Lighthouse for the Blind</li>
-                  <li>The Hive</li>
+                  <li className="team_member">
+                    <div className="member_name">Asha Srikantiah</div>
+                    <div className="member_role">Human Centered Design Specialist</div>
+                  </li>
+                  <li className="team_member">
+                    <div className="member_name">Deon Upshaw</div>
+                    <div className="member_role">V.I. Marketing Specialist</div>
+                  </li>
                 </ul>
               </div>
             </div>
