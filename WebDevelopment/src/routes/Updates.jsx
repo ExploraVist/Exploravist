@@ -1,5 +1,4 @@
-import React, { Fragment, useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { Fragment } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import UpdatesHero from '../components/updates/UpdatesHero';
