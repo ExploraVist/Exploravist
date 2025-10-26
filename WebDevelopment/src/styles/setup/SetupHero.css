@@ -1,0 +1,392 @@
+.setup_hero {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: calc(var(--nav-size) + 1rem);
+    padding-bottom: 10rem;
+    background-color: var(--bg);
+    position: relative;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+    .setup_hero {
+        padding-top: 2.5rem;
+    }
+}
+
+.setup_hero_wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+
+.setup_progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.progress_bar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.progress_dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-three);
+    border: 1px solid var(--line);
+    transition: all 0.3s ease;
+}
+
+.progress_dot.active {
+    background-color: var(--alt);
+    border-color: var(--alt);
+    color: var(--text);
+}
+
+.progress_text {
+    font-size: 0.95rem;
+    color: var(--text-2);
+    margin: 0;
+    font-weight: 500;
+}
+
+.setup_step {
+    background-color: var(--bg-two);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.setup_step:focus {
+    border-color: var(--alt);
+    box-shadow: 0 0 0 2px rgba(36, 88, 230, 0.15);
+}
+
+.step_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.step_image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-three);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--line-2);
+}
+
+.step_image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.step_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step_title {
+    font-size: 2.2rem;
+    color: var(--text);
+    margin: 0;
+    font-weight: 500;
+}
+
+.step_description {
+    font-size: 1.2rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.step_instructions {
+    background-color: var(--bg-three);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--line-2);
+}
+
+.instructions_title {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+}
+
+.instructions_list {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.instruction_item {
+    font-size: 1.1rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.instruction_item:last-child {
+    margin-bottom: 0;
+}
+
+.step_navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.setup_button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.setup_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.setup_button.primary {
+    background-color: var(--alt);
+    color: var(--text);
+    border-color: var(--alt);
+}
+
+.setup_button.primary:hover:not(:disabled),
+.setup_button.primary:focus:not(:disabled) {
+    background-color: var(--alt-2);
+    border-color: var(--alt-2);
+    transform: translateY(-1px);
+}
+
+.setup_button.secondary {
+    background-color: transparent;
+    color: var(--text-2);
+    border-color: var(--line);
+}
+
+.setup_button.secondary:hover:not(:disabled),
+.setup_button.secondary:focus:not(:disabled) {
+    border-color: var(--alt);
+    color: var(--text);
+    transform: translateY(-1px);
+}
+
+.setup_completion {
+    text-align: center;
+    background-color: var(--bg-two);
+    border: 2px solid var(--alt);
+    border-radius: 16px;
+    padding: 4rem 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.completion_icon {
+    width: 80px;
+    height: 80px;
+    color: var(--alt);
+    margin: 0 auto 2rem;
+}
+
+.completion_title {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin: 0 0 1.5rem 0;
+    font-weight: 500;
+}
+
+.completion_description {
+    font-size: 1.2rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin: 0 0 3rem 0;
+}
+
+.completion_actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.setup_help {
+    background-color: var(--bg-two);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.help_title {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+}
+
+.help_text {
+    font-size: 1.1rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+}
+
+.help_link {
+    color: var(--alt);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.help_link:hover,
+.help_link:focus {
+    color: var(--alt-2);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .step_content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .step_image_container {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .setup_hero {
+        padding: 2rem 1rem;
+    }
+
+    .setup_hero_wrapper {
+        max-width: 95vw;
+    }
+
+
+    .setup_step {
+        padding: 2rem 1.5rem;
+    }
+
+    .step_title {
+        font-size: 1.8rem;
+    }
+
+    .step_description {
+        font-size: 1.1rem;
+    }
+
+    .step_navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .setup_button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .completion_actions {
+        flex-direction: column;
+    }
+
+    .completion_actions .setup_button {
+        width: 100%;
+    }
+
+    .progress_bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .progress_dot {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .step_title {
+        font-size: 1.5rem;
+    }
+
+    .setup_step {
+        padding: 1.5rem 1rem;
+    }
+
+    .completion_title {
+        font-size: 2rem;
+    }
+
+    .completion_description {
+        font-size: 1.1rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .setup_step {
+        border-width: 3px;
+    }
+    
+    .setup_button {
+        border-width: 3px;
+    }
+    
+    .progress_dot {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .setup_button,
+    .progress_dot,
+    .setup_step {
+        transition: none;
+    }
+    
+    .setup_button:hover,
+    .setup_button:focus {
+        transform: none;
+    }
+}
