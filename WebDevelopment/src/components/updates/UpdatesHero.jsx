@@ -6,11 +6,13 @@ const UpdatesHero = () => {
   // Example data array with label + date.
   // (They are ordered from newest at the top to oldest at the bottom.)
   const updatesData = [
-    { id: 1, label: 'Hive Partnership', date: '12.05.24', route: '/updates/hive-partnership' },
-    { id: 2, label: 'HMC Clinic', date: '8.16.24', route: '/updates/hmc-clinic' },
-    { id: 3, label: 'Gen 0.3', date: '04.21.24', route: '/updates/gen-0.3' },
-    { id: 4, label: 'Gen 0.2', date: '02.15.24', route: '/updates/gen-0.2' },
-    { id: 5, label: 'Gen 0.1', date: '12.25.23', route: '/updates/gen-0.1' },
+    { id: 1, label: 'Gen 0.4', date: '06.21.25', route: '/updates/gen-0.4' },
+    { id: 2, label: 'SageTank Win', date: '05.03.25', route: '/updates/sagetank-first-place' },
+    { id: 3, label: 'Hive Partnership', date: '12.05.24', route: '/updates/hive-partnership' },
+    { id: 4, label: 'HMC Clinic', date: '8.16.24', route: '/updates/hmc-clinic' },
+    { id: 5, label: 'Gen 0.3', date: '04.21.24', route: '/updates/gen-0.3' },
+    { id: 6, label: 'Gen 0.2', date: '02.15.24', route: '/updates/gen-0.2' },
+    { id: 7, label: 'Gen 0.1', date: '12.25.23', route: '/updates/gen-0.1' },
   ];
 
   return (
@@ -33,7 +35,7 @@ const UpdatesHero = () => {
 
                 {/* Column 2: Node in center */}
                 <div className="node_container">
-                  <Link to={update.route} className="node_link" aria-label={`${update.name} on ${update.date}. Click for a detailed report!`}>
+                  <Link to={update.route} className="node_link" aria-label={`${update.label} on ${update.date}. Click for a detailed report!`}>
                     <div className="node_outer_circle">
                       <div className="node_inner_circle" />
                     </div>

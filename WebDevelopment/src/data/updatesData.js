@@ -63,5 +63,34 @@ export const updates = [
        { type: 'header', content: "Click below to read the full article!", headerLevel: 3 },
        { type: 'imageLink', imageKey: "hive-partners", link: "https://us14.campaign-archive.com/?u=9be17699582e7f4b8d4a76675&id=7746d38772" }
      ]
+   },
+   {
+     slug: "sagetank-first-place",
+     category: "SageTank Win",
+     date: "05.03.25",
+     title: "ExploraVist Wins First Place at SageTank 2025",
+     sections: [
+       { type: 'paragraph', content: "ExploraVist took top honors at the 2025 SageTank pitch competition, earning first place for our vision of affordable, wearable accessibility." },
+       { type: 'paragraph', content: "The judging panel highlighted how closely we partner with the blind and visually impaired community, and how our device keeps cutting-edge capabilities within reach for everyday use." },
+       { type: 'paragraphWithLink', content: "Get the full story from The Student Life:", linkText: "Mudd startup ExploraVist keeps accessibility affordable with new wearable tech", linkUrl: "https://tsl.news/mudd-startup-exploravist-keeps-accessibility-affordable-with-new-wearable-tech/" },
+       { type: 'paragraph', content: "Winning SageTank gives us fresh momentum heading into our next build sprint, providing new visibility and validation as we scale up production-ready hardware." }
+     ]
+   },
+   {
+     slug: "gen-0.4",
+     category: "Gen 0.4",
+     date: "06.21.25",
+     title: "Gen 0.4: Boston Sprint and Rebuilt OS",
+     sections: [
+       { type: 'header', content: "Boston Build Sprint", headerLevel: 3 },
+       { type: 'paragraph', content: "On May 27, 2025, the ExploraVist team landed in Boston for a three-and-a-half week challenge: rebuild our operating system from scratch and push toward Gen 0.4 of the device." },
+       { type: 'header', content: "Team on the Ground", headerLevel: 4 },
+       { type: 'list', items: ["Max Conine", "Ket Hollingsworth", "Bilal Abraham", "Ari Hollingsworth", "Dominick Quaye"] },
+       { type: 'paragraph', content: "The sprint let us rethink every layer—from firmware to cloud handoff—resulting in the fastest response times we have seen so far, even if the new build still comes with a few bugs to iron out." },
+       { type: 'header', content: "What Gen 0.4 Delivers", headerLevel: 4 },
+       { type: 'list', items: ["Voice assistant for conversational questions without taking a picture", "On-device image gallery so users can revisit captured moments", "Initial retail packaging concepts that make unboxing intuitive", "Attachment ideas to clip the device to caps, glasses, shirts, and more"] },
+       { type: 'paragraph', content: "By the end of the sprint we left with a functional Gen 0.4 device, early packaging samples, and a roadmap of modular accessories that keep the device adaptable to any daily routine." },
+       { type: 'paragraph', content: "Next up: polish the new OS, stress-test the voice assistant, and finalize attachment options so every user can find the mount that fits their style." }
+     ]
    }
  ];

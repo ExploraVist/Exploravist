@@ -28,10 +28,10 @@ const AboutHero = () => {
             <span className="about_hero_label">Our Mission</span>
             <div className="about_hero_statements">
               <p className="about_statement">
-                <span className="statement_highlight">Empowering</span> the blind and visually impaired
+                <span className="statement_highlight">Empowering</span> the blind and low vision
               </p>
               <p className="about_statement">
-                through <span className="statement_highlight">intuitive, affordable</span> technology
+                with <span className="statement_highlight">intuitive</span> and <span className="statement_highlight">affordable</span> technology
               </p>
               <p className="about_statement">
                 that sparks <span className="statement_highlight">curiosity</span> and fosters <span className="statement_highlight">connection</span>
