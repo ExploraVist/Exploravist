@@ -54,11 +54,11 @@
 
 .founders_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 1rem;
+  padding: 0 7.5rem;
 }
 
 /* Large screens (4 columns) */
@@ -205,40 +205,68 @@
 
 .team_member {
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 12px;
   padding: 1.5rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.team_member::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--alt) 0%, var(--alt-2) 100%);
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 .team_member:hover {
   border-color: var(--line-2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team_member:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .member_name {
   font-size: 1.25rem;
   color: var(--text);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
   position: relative;
   display: inline-block;
-  padding-right: 1rem;
+  padding-right: 0;
+  letter-spacing: -0.01em;
 }
 
 .member_name::after {
   content: '';
   position: absolute;
-  left: calc(100% - 0.5rem);
-  top: 50%;
-  width: calc(100% - 1rem);
-  height: 1px;
-  background-color: var(--line);
-  max-width: 200px;
+  bottom: -0.25rem;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--alt) 0%, transparent 100%);
+  border-radius: 1px;
+  opacity: 0.7;
 }
 
 .member_role {
   font-size: 1rem;
   color: var(--text-3);
   font-weight: 400;
+  opacity: 0.8;
+  letter-spacing: 0.01em;
 }
 
 @media (max-width: 640px) {
@@ -251,14 +279,22 @@
     padding: 1.25rem;
   }
   
+  .team_member::before {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 6px;
+    height: 6px;
+  }
+  
   .member_name {
     font-size: 1.125rem;
-    padding-right: 0.75rem;
+    padding-right: 0;
+    margin-bottom: 0.5rem;
   }
   
   .member_name::after {
-    left: calc(100% - 0.25rem);
-    max-width: 150px;
+    width: 25px;
+    height: 1.5px;
   }
   
   .member_role {

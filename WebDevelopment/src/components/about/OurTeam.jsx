@@ -1,6 +1,5 @@
 import React from 'react';
 import FounderCard from './FounderCard';
-import mauImage from '../../imgs/mau.jpg';
 import ketImage from '../../imgs/ket.jpg';
 import domImage from '../../imgs/dom.jpg';
 import bilalImage from '../../imgs/bilal.jpg';
@@ -24,13 +23,6 @@ const OurTeam = () => {
       linkedIn: "https://www.linkedin.com/in/dominick-q-907baa210/",
       audioClip: domIntro,
       image: domImage
-    },
-    {
-      name: "Mauricio Bravo",
-      role: "CCO",
-      linkedIn: "https://www.linkedin.com/in/mauriciobravoguzman/",
-      audioClip: '#',
-      image: mauImage
     },
     {
       name: "Bilal Abraham",
@@ -71,6 +63,10 @@ const OurTeam = () => {
             <h3 className="section_title">Team Members</h3>
             <ul className="team_list">
               <li className="team_member">
+                <div className="member_name">Will Kincaid</div>
+                <div className="member_role">COO</div>
+              </li>
+              <li className="team_member">
                 <div className="member_name">Nithya Yeluri</div>
                 <div className="member_role">Embedded</div>
               </li>
@@ -79,17 +75,17 @@ const OurTeam = () => {
                 <div className="member_role">Embedded</div>
               </li>
               <li className="team_member">
-                <div className="member_name">Nico Villalba</div>
-                <div className="member_role">App Development</div>
+                <div className="member_name">Avani Anne</div>
+                <div className="member_role">Embedded</div>
               </li>
               <li className="team_member">
-                <div className="member_name">Ruixi Xiang</div>
-                <div className="member_role">Marketing Intern</div>
+                <div className="member_name">Alan Gutierrez</div>
+                <div className="member_role">Machine Learning</div>
               </li>
-              {/* <li className="team_member">
-                <div className="member_name">Alex Chacon</div>
-                <div className="member_role">Marketing Intern</div>
-              </li> */}
+              <li className="team_member">
+                <div className="member_name">Jonathan Ipe</div>
+                <div className="member_role">Machine Learning</div>
+              </li>
             </ul>
           </section>
 
@@ -102,7 +98,7 @@ const OurTeam = () => {
             <ul className="team_list">
               <li className="team_member">
                 <div className="member_name">Katie Baakkonen</div>
-                <div className="member_role">Engineer</div>
+                <div className="member_role">Engineering</div>
               </li>
               <li className="team_member">
                 <div className="member_name">Taylor Levinson</div>
@@ -110,11 +106,11 @@ const OurTeam = () => {
               </li>
               <li className="team_member">
                 <div className="member_name">Daniel Fajardo</div>
-                <div className="member_role">Engineer</div>
+                <div className="member_role">Engineering</div>
               </li>
               <li className="team_member">
                 <div className="member_name">Massin Ihs</div>
-                <div className="member_role">Engineer</div>
+                <div className="member_role">Engineering</div>
               </li>
               <li className="team_member">
                 <div className="member_name">Ket Hollingsworth</div>
@@ -122,17 +118,17 @@ const OurTeam = () => {
               </li>
               <li className="team_member">
                 <div className="member_name">Dominick Quaye</div>
-                <div className="member_role">Engineer</div>
+                <div className="member_role">Engineering</div>
               </li>
               <li className="team_member">
                 <div className="member_name">Mauricio Bravo</div>
-                <div className="member_role">Engineer</div>
+                <div className="member_role">Engineering</div>
               </li>
             </ul>
           </section>
 
           {/* Mentors/Advisory Board Section */}
-          <section className="mentors_advisory">
+          {/* <section className="mentors_advisory">
             <h3 className="section_title">Mentors/Advisory Board</h3>
             <div className="advisor_subsections">
               <div className="technical_advisors">
@@ -162,7 +158,7 @@ const OurTeam = () => {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </section>
